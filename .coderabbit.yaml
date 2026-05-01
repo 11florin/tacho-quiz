@@ -1,0 +1,56 @@
+version: 1
+
+review:
+  auto_review: true
+  auto_review_on:
+    - pull_request_opened
+    - pull_request_reopened
+    - pull_request_synchronize
+
+  level: standard # options: relaxed, standard, strict
+  tone: friendly # constructive, polite, supportive
+  max_comments: 20 # prevents overwhelming feedback
+
+  languages:
+    javascript:
+      enabled: true
+      check_style: true
+      check_best_practices: true
+      check_security: true
+    html:
+      enabled: true
+      check_accessibility: true
+      check_structure: true
+    css:
+      enabled: true
+      check_style: true
+
+ignore:
+  - "docs/**"
+  - "assets/images/**"
+  - "assets/audio/**"
+  - "LICENSE"
+  - "*.md"
+
+rules:
+  javascript:
+    prefer_const: true
+    no_unused_vars: true
+    no_console: false # allowed for debugging during development
+    max_function_length: 80
+
+  html:
+    require_alt_attribute: true
+    no_inline_styles: true
+
+  css:
+    enforce_bem: false
+    no_important: true
+
+messages:
+  summary: true
+  suggestions: true
+  praise: true # includes positive reinforcement
+
+rate_limits:
+  reviews_per_hour: 10

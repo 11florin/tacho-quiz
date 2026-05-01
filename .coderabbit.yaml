@@ -7,9 +7,9 @@ review:
     - pull_request_reopened
     - pull_request_synchronize
 
-  level: standard # options: relaxed, standard, strict
-  tone: friendly # constructive, polite, supportive
-  max_comments: 20 # prevents overwhelming feedback
+  level: standard
+  tone: friendly
+  max_comments: 20
 
   languages:
     javascript:
@@ -36,7 +36,7 @@ rules:
   javascript:
     prefer_const: true
     no_unused_vars: true
-    no_console: false # allowed for debugging during development
+    no_console: false
     max_function_length: 80
 
   html:
@@ -44,13 +44,12 @@ rules:
     no_inline_styles: true
 
   css:
-    enforce_bem: false
     no_important: true
 
 messages:
   summary: true
   suggestions: true
-  praise: true # includes positive reinforcement
+  praise: true
 
 rate_limits:
   reviews_per_hour: 10

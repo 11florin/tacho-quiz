@@ -78,6 +78,11 @@ tacho-quiz/
 
 ---
 
+## Image Credits
+- Favicon base image sourced from: https://commons.wikimedia.org/wiki/File:Circle-icons-steeringwheel.svg
+
+---
+
 ## 📄 Licence
 
 This project is licensed under the **MIT Licence**.

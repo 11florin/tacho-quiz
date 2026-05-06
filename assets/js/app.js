@@ -14,6 +14,6 @@ navList.addEventListener('click', function (e) {
   if (e.target.tagName === 'A') {
     navMenu.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
-    hamburger.setAttribute('aria-label', 'Deschide meniu');
+    hamburger.setAttribute('aria-label', 'open menu');
   }
 });

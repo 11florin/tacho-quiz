@@ -7,10 +7,6 @@ review:
     - pull_request_reopened
     - pull_request_synchronize
 
-  level: standard
-  tone: friendly
-  max_comments: 20
-
   languages:
     javascript:
       enabled: true
@@ -50,6 +46,3 @@ messages:
   summary: true
   suggestions: true
   praise: true
-
-rate_limits:
-  reviews_per_hour: 10

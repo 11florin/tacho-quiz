@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Tacho Quiz helps professional drivers prepare for CPC exams by testing their knowledge of driving times, 
-      rest periods, tachograph rules, and road safety. Designed for learning and confidence building."
-    />
+    <meta name="description" content="View your Tacho Quiz results and see how well you understand CPC driving and tachograph rules.">
     <meta
       name="keywords"
       content="Tacho Quiz, CPC training, driver education, tachograph rules, driving times, rest periods, road safety, 
@@ -69,7 +65,18 @@
   <body>
     <header>
       <div class="navbar" id="navbar">
-        <nav>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="open-menu"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <nav id="nav-menu">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="quiz.html">Quiz</a></li>
@@ -82,5 +89,10 @@
         </nav>
       </div>
     </header>
+
+
+
+
+    <script src="assets/js/app.js"></script>
   </body>
 </html>

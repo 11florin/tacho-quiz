@@ -1,24 +1,79 @@
+/* Navbar base */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 60px;
+  position: relative;
+}
 
-/* navbar */
-.navbar ul {
+/* Hamburger hide on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.hamburger .bar {
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform 0.28s ease, opacity 0.2s, width 0.25s;
+  transform-origin: center;
+}
+
+/* Animation X */
+.hamburger[aria-expanded="true"] .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger[aria-expanded="true"] .bar:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+.hamburger[aria-expanded="true"] .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Menu mobil — slide down */
+@media (max-width: 768px) {
+  .hamburger {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    list-style: none;
-    padding: 1rem 0;
-    margin: 0;
-}
-.navbar a {
-    text-decoration: none;
-    color: #222;
-    font-weight: 600;
-}
-.navbar a[aria-current='page'] {
-    border-bottom: 2px solid #007bff;
-    color: #007bff;
-}
+  }
 
-.navbar a.active {
-  color: #007bff;
-  border-bottom: 2px solid #007bff;
+  #nav-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.35s ease, opacity 0.25s;
+    background: #fff;
+    z-index: 100;
+  }
+
+  #nav-menu.open {
+    max-height: 320px;
+    opacity: 1;
+  }
+
+  #nav-menu ul {
+    flex-direction: column;
+    padding: 8px 0 16px;
+  }
+
+  #nav-menu ul li a {
+    display: block;
+    padding: 12px 20px;
+  }
 }

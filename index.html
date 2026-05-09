@@ -98,7 +98,64 @@
       </div>
     </header>
 
-    <script src="assets/js/app.js"></script>
+    <main>
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero-inner">
+          <span class="hero-badge">CPC Preparation</span>
+          <h1 class="hero-title">Tacho <span>Quiz</span></h1>
+          <p class="hero-desc">
+            Test your knowledge of driving times, rest periods, tachograph rules
+            and road safety. Built for professional drivers.
+          </p>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat-value">60+</div>
+              <div class="hero-stat-label">Questions</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-value">6</div>
+              <div class="hero-stat-label">Categories</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-value">Free</div>
+              <div class="hero-stat-label">Always</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <section class="categories-section">
+        <div class="screan-header">
+          <h2>Categories</h2>
+        </div>
+
+        <div class="categories-grid" id="cat-grid">
+          <button class="cat-btn" data-cat="driving-times">
+            🕐 Driving Times
+          </button>
+          <button class="cat-btn" data-cat="rest-periods">
+            🛏 Rest Periods
+          </button>
+          <button class="cat-btn" data-cat="tachograph-rules">
+            📟 Tachograph Rules
+          </button>
+          <button class="cat-btn" data-cat="road-safety">🛡 Road Safety</button>
+          <button class="cat-btn" data-cat="vehicle-checks">
+            🔧 Vehicle Checks
+          </button>
+          <button class="cat-btn" data-cat="cpc-mixed">📋 CPC Mixed</button>
+        </div>
+
+        <div class="screen-footer">
+          <p id="status-text" class="status-text">Select a category to begin</p>
+          <button id="start-btn" class="action-btn" disabled>START QUIZ</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/index.js"></script>
     <script src="assets/js/navbar.js"></script>
   </body>
 </html>

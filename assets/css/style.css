@@ -125,7 +125,7 @@ header {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Mobile nav-menu */
+/* Mobile first nav-menu */
 #nav-menu {
   position: absolute;
   top: var(--nav-h);

@@ -172,6 +172,45 @@ header {
   font-weight: 500;
   background: var(--color-surface-raised);
 }
+
+/* navbar Tablet and  > */
+@media (min-width: 768px) {
+  :root {
+    --nav-h: 60px;
+  }
+  .navbar {
+    padding: 0 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .hamburger {
+    display: none;
+  }
+  #nav-menu {
+    position: static;
+    max-height: none;
+    opacity: 1;
+    overflow: visible;
+    border-bottom: none;
+    background: transparent;
+    transition: none;
+  }
+  #nav-menu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    padding: 0;
+  }
+  #nav-menu ul li a {
+    display: inline;
+    padding: 0;
+    font-size: 1rem;
+  }
+  #nav-menu ul li a:hover,
+  #nav-menu ul li a.active {
+    background: transparent;
+  }
+}
 .footer {
   display: flex;
   flex-direction: column;
@@ -192,7 +231,7 @@ header {
   display: flex;
   justify-content: center;
   color: var(--color-text);
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
   font-weight: 700;
 }
 .social-networks ul {

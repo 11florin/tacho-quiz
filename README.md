@@ -40,7 +40,7 @@ The aim of this project is to create a responsive and accessible quiz that allow
 - **CSS3**
 - **JavaScript (ES6+)**
 - **Git & GitHub** for version control
-- **CodeRabbit** for automated code review
+- **Copilot** for automated code review
 
 ---
 
@@ -75,6 +75,11 @@ tacho-quiz/
 |-- data/
 |-- docs/
 |-- README.md
+
+---
+
+## Image Credits
+- Favicon base image sourced from: https://commons.wikimedia.org/wiki/File:Circle-icons-steeringwheel.svg
 
 ---
 

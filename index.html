@@ -1,12 +1,198 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tacho Quiz</title>
-</head>
-<body>
-    <!-- Test CodeRabbit -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Start your Tacho Quiz journey and test your knowledge of driving times, rest periods, and tachograph rules."
+    />
+    <meta
+      name="keywords"
+      content="Tacho Quiz, CPC training, driver education, tachograph rules, driving times, rest periods, road safety, 
+      professional drivers, Code Institute project, learning app"
+    />
+    <title>Home | Tacho Quiz</title>
 
-</body>
+    <!-- Favicon -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/images/icons/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="assets/images/icons/android-chrome-512x512.png"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/icons/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/icons/favicon-16x16.png"
+    />
+
+    <!-- Apple Touch Icon (iPhone/iPad) -->
+    <link
+      rel="apple-touch-icon"
+      href="assets/images/icons/apple-touch-icon.png"
+    />
+
+    <!-- Web Manifest -->
+    <link rel="manifest" href="assets/images/icons/site.webmanifest" />
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar" id="navbar">
+        <a href="index.html" class="nav-logo">
+          Tacho <span>Quiz</span>
+          <!-- <img src="assets/images/logo/logo.png" alt="Tacho Quiz" height="56"/> -->
+        </a>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Open menu"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <nav id="nav-menu" aria-label="Main navigation">
+          <ul>
+            <li>
+              <a href="index.html" aria-current="page" class="active">Home</a>
+            </li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="score.html">Score</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero-inner">
+          <span class="hero-badge">CPC Preparation</span>
+          <h2 class="hero-title">Tacho <span>Quiz</span></h2>
+          <p class="hero-desc">
+            Test your knowledge of driving times, rest periods, tachograph rules
+            and road safety. Built for professional drivers.
+          </p>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat-value">60+</div>
+              <div class="hero-stat-label">Questions</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-value">6</div>
+              <div class="hero-stat-label">Categories</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-value">Free</div>
+              <div class="hero-stat-label">Always</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <section class="categories-section">
+        <div class="screen-header">
+          <h1>Categories</h1>
+        </div>
+
+        <div class="categories-grid" id="cat-grid">
+          <button class="cat-btn" data-cat="driving-times">
+            🕐 Driving Times
+          </button>
+          <button class="cat-btn" data-cat="rest-periods">
+            🛏 Rest Periods
+          </button>
+          <button class="cat-btn" data-cat="tachograph-rules">
+            📟 Tachograph Rules
+          </button>
+          <button class="cat-btn" data-cat="road-safety">🛡 Road Safety</button>
+          <button class="cat-btn" data-cat="vehicle-checks">
+            🔧 Vehicle Checks
+          </button>
+          <button class="cat-btn" data-cat="cpc-mixed">📋 CPC Mixed</button>
+        </div>
+
+        <div class="screen-footer">
+          <p id="status-text" class="status-text">Select a category to begin</p>
+          <button id="start-btn" class="action-btn" disabled>START QUIZ</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="copyright">
+        &copy;Florin Albu
+      </div>
+      <div class="footer-paragraph">
+        <p>
+          Learn tacho. Build confidence.
+        </p>
+      </div>
+      <div class="social-networks">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" rel="noopener noreferrer"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.twitter.com/" target="_blank" aria-label="Twitter" rel="noopener noreferrer"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" rel="noopener noreferrer"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/" target="_blank" aria-label="Youtube" rel="noopener noreferrer"
+                  ><i class="fa-brands fa-square-youtube"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+    </footer>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7306ceb67d.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

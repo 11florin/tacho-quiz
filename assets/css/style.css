@@ -304,16 +304,22 @@ main {
     padding: 14px;
   }
 }
+/* Apply styles only when the button is active (not disabled). 
+   Prevents hover, pointer and shadow effects on disabled buttons. */
 .action-btn:not(:disabled):not([disabled]) {
   background: var(--color-primary-dark);
   color: #fff;
   cursor: pointer;
   box-shadow: 0 0 24px rgba(59, 130, 246, 0.3);
 }
+/* Hover effect applied only to active buttons. 
+   Ensures disabled buttons do not react visually on hover. */
 .action-btn:not(:disabled):not([disabled]):hover {
   background: var(--color-primary);
   box-shadow: 0 0 24px rgba(96, 165, 250, 0.4);
 }
+/* Active (pressed) state for active buttons only. 
+   Adds a subtle scale effect to simulate a button press. */
 .action-btn:not(:disabled):not([disabled]):active {
   transform: scale(0.98);
 }
@@ -327,6 +333,15 @@ a.action-btn {
   background: var(--color-primary);
   box-shadow: 0 0 24px rgba(96, 165, 250, 0.4);
 }
+/* Status text */
+.status-text {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: 10px;
+  min-height: 18px;
+}
+
 .footer {
   display: flex;
   flex-direction: column;

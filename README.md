@@ -79,9 +79,41 @@ tacho-quiz/
 ---
 
 ## Image Credits
-- Favicon base image sourced from: https://commons.wikimedia.org/wiki/File:Circle-icons-steeringwheel.svg
+- [Favicon base image sourced from:](https://commons.wikimedia.org/wiki/File:Circle-icons-steeringwheel.svg)
+
 
 ---
+
+## Wireframes
+
+Wireframes were created with the assistance of Claude AI (Anthropic) 
+based on my own design decisions and requirements.
+
+The layout, structure, and content for each page were planned by me, 
+then rendered using Claude as a tool.
+
+**Tools used:** Claude AI (claude.ai) for wireframe generation
+
+### Mobile
+![Home Mobile](assets/wireframes/1-Home-mobile.png)
+![Quiz Mobile](assets/wireframes/2-Quiz-mobile.png)
+![Score Mobile](assets/wireframes/1-Score-mobile.png)
+![Login Mobile](assets/wireframes/2-Login-mobile.png)
+![About Mobile](assets/wireframes/1-About-mobile.png)
+
+### Tablet
+![Home Tablet](assets/wireframes/1-Home-tablet.png)
+![Quiz Tablet](assets/wireframes/2-Quiz-tablet.png)
+![Score Tablet](assets/wireframes/1-Score-tablet.png)
+![Login Tablet](assets/wireframes/2-Login-tablet.png)
+![About Tablet](assets/wireframes/1-About-tablet.png)
+
+### Desktop
+![Home Desktop](assets/wireframes/1-Home-desktop.png)
+![Quiz Desktop](assets/wireframes/2-Quiz-desktop.png)
+![Score Desktop](assets/wireframes/1-Score-desktop.png)
+![Login Desktop](assets/wireframes/2-Login-desktop.png)
+![About Desktop](assets/wireframes/1-About-desktop.png)
 
 ## 📄 Licence
 

@@ -81,6 +81,7 @@ header {
 }
 
 .nav-logo {
+  margin-left: 10px;
   font-size: 17px;
   font-weight: 700;
   color: var(--color-text);
@@ -94,6 +95,7 @@ header {
 
 /* Hamburger */
 .hamburger {
+  margin-right: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -391,6 +393,74 @@ a.action-btn {
   font-weight: 600;
   box-shadow: 0 0 0 1px var(--color-selected-border);
 }
+
+/* Quiz */
+.question-counter {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-top: 5px;
+}
+@media (min-width: 480px) {
+  .question-counter {
+    font-size: 14px;
+    margin-top: 6px;
+  }
+}
+.question-box {
+  margin: 12px;
+  padding: 14px;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text);
+  text-align: center;
+}
+@media (min-width: 480px) {
+  .question-box {
+    margin: 16px;
+    padding: 16px;
+    font-size: 15px;
+  }
+}
+.answer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 0 12px 12px;
+}
+@media (min-width: 480px) {
+  .answer-list {
+    gap: 8px;
+    padding: 0 16px 16px;
+  }
+}
+.answer-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 12px;
+  font-family: var(--font);
+  font-size: 14px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+@media (min-width: 480px) {
+  .answer-btn {
+    gap: 12px;
+    padding: 13px 14px;
+  }
+}
+
+
+/* footer */
 .footer {
   display: flex;
   flex-direction: column;

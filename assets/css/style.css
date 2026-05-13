@@ -272,6 +272,97 @@ main {
     font-size: 20px;
   }
 }
+
+/* Hero section */
+.hero {
+  padding: 20px 16px 0;
+}
+@media (min-width: 480px) {
+  .hero {
+    padding: 24px 20px 0;
+  }
+}
+.hero-inner {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 20px 16px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.hero-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-primary);
+  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  border-radius: 20px;
+  padding: 3px 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.hero-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.hero-title span {
+  color: var(--color-primary);
+}
+@media (min-width: 480px) {
+  .hero-title {
+    font-size: 26px;
+  }
+}
+.hero-desc {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 18px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 480px) {
+  .hero-desc {
+    font-size: 15px;
+  }
+}.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.hero-stat {
+  flex: 1;
+  padding: 10px 8px;
+  text-align: center;
+  border-right: 1px solid var(--color-border);
+}
+.hero-stat:last-child {
+  border-right: none;
+}
+.hero-stat-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.hero-stat-label {
+  font-size: 11px;
+  color:var(--color-text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* screen footer */
 .screen-footer {
   padding: 12px;
   border-top: 1px solid var(--color-border);
@@ -467,6 +558,12 @@ a.action-btn {
   background: rgba(251, 146, 60, 0.18);
   border-color: #fb923c;
   color: #fed7aa;
+}
+
+/* selected glow ring */
+.cat-btn.selected {
+  box-shadow: 0 0 0 1px currentColor;
+  font-weight: 600;
 }
 
 /* Quiz */

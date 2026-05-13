@@ -458,7 +458,36 @@ a.action-btn {
     padding: 13px 14px;
   }
 }
-
+.answer-btn:hover:not(:disabled) {
+  background: var(--color-border);
+  color: var(--color-text);
+  border-color: var(--color-border-strong);
+}
+.answer-btn .answer-label {
+  font-weight: 700;
+  min-width: 20px;
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+.answer-btn.correct {
+  background: var(--color-correct-bg);
+  border-color: var(--color-correct-border);
+  color: var(--color-correct);
+}
+.answer-btn.correct .answer-label {
+  color: var(--color-correct);
+}
+.answer-btn.wrong {
+  background: var(--color-wrong-bg);
+  border-color: var(--color-wrong-border);
+  color: var(--color-wrong);
+}
+.answer-btn.wrong .answer-label {
+  color: var(--color-wrong);
+}
+.answer-btn:disabled {
+  cursor: default;
+}
 
 /* footer */
 .footer {

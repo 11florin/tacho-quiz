@@ -59,7 +59,6 @@ body {
 }
 main {
   flex: 1 0 auto;
-  /* margin-top: 66px; */
 }
 
 /* Header and Navbar */
@@ -236,7 +235,8 @@ main {
 .quiz-section,
 .score-section,
 .login-section,
-.about-section {
+.about-section,
+.confirm-section {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
@@ -247,7 +247,8 @@ main {
   .quiz-section,
   .score-section,
   .login-section,
-  .about-section {
+  .about-section,
+  .confirm-section {
     border-radius: var(--radius-lg);
   }
 }
@@ -596,14 +597,14 @@ a.action-btn {
     font-size: 15px;
   }
 }
-.answer-list {
+.answers-list {
   display: flex;
   flex-direction: column;
   gap: 7px;
   padding: 0 12px 12px;
 }
 @media (min-width: 480px) {
-  .answer-list {
+  .answers-list {
     gap: 8px;
     padding: 0 16px 16px;
   }
@@ -811,6 +812,12 @@ a.action-btn {
   color: var(--color-primary);
   font-weight: 600;
   text-decoration: underline;
+}
+
+/* confirm */
+.confirm-p {
+  margin: 15px;
+  text-align: center;
 }
 
 /* footer */

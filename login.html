@@ -97,7 +97,48 @@
       </div>
     </header>
 
-    <main></main>
+    <main>
+      <section class="login-section">
+        <form action="confirm.htm" method="POST">
+          <div class="screan-header">
+            <h1>Login</h1>
+          </div>
+          <div class="login-body">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Enter your username"
+                autocomplete="username"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                placeholder="********"
+                autocomplete="current-password"
+                required
+              />
+            </div>
+            <p class="error-msg" id="error-msg" aria-live="polite"></p>
+
+            <a href="#" class="forgot-link" id="forgot-link"
+              >Forgot Password?</a
+            >
+            <button class="action-btn action-btn--full" id="login-btn"> 
+              LOGIN
+            </button>
+            <div class="divider"></div>
+            <p class="signup-text">
+              Don't have an account? <a href="#" id="signup-link">Sign Up</a>
+            </p>
+          </div>
+        </form>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="copyright">&copy;Florin Albu</div>

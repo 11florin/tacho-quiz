@@ -40,7 +40,8 @@ The aim of this project is to create a responsive and accessible quiz that allow
 - **CSS3**
 - **JavaScript (ES6+)**
 - **Git & GitHub** for version control
-- **Copilot** for automated code review
+- **Copilot** for automated code review and debug
+- **Claude** Quiz questions were AI-generated and manually reviewed for accuracy.
 
 ---
 

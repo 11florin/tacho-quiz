@@ -97,7 +97,33 @@
       </div>
     </header>
 
-    <main></main>
+    <main>
+      <section class="quiz-section">
+        <div class="screen-header">
+          <h1>Tacho Quiz</h1>
+          <p class="question-counter" id="question-counter">Question 1 of 10</p>
+        </div>
+        <div class="question-box" id="question-box">
+          <p id="question-text">Loading question...</p>
+        </div>
+
+        <div class="answers-list" id="answers-list"></div>
+
+        <!-- Instant feedback explanation -->
+
+        <div
+          class="explanation-box"
+          id="explanation-box"
+          style="display: none"
+        ></div>
+
+        <div class="screen-footer">
+          <button class="action-btn" id="next-btn" disabled>
+            NEXT QUESTION
+          </button>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="copyright">&copy;Florin Albu</div>
@@ -146,7 +172,8 @@
       </div>
     </footer>
 
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/questions.js"></script>
+    <script src="assets/js/quiz.js"></script>
     <script src="assets/js/navbar.js"></script>
     <script
       src="https://kit.fontawesome.com/7306ceb67d.js"

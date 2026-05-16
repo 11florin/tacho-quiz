@@ -97,7 +97,29 @@
       </div>
     </header>
 
-    <main></main>
+    <main>
+      <section class="score-section">
+        <div class="screen-header">
+          <h1>Quiz Completed</h1>
+        </div>
+
+        <div class="score-display">
+          <p class="score-label">Your Score</p>
+          <p class="score-value" id="score-value">0 / 10</p>
+          <div class="score-bar-wrap">
+            <div class="score-bar-fill" id="score-bar"></div>
+          </div>
+          <p class="score-percent" id="score-percent">0%</p>
+          <div class="score-message" id="score-message">Loading...</div>
+        </div>
+
+        <div class="score-breakdown" id="score-breakdown"></div>
+
+        <div class="screen-footer">
+          <a href="index.html" class="action-btn">PLAY AGAIN</a>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="copyright">&copy;Florin Albu</div>
@@ -146,7 +168,7 @@
       </div>
     </footer>
 
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/score.js"></script>
     <script src="assets/js/navbar.js"></script>
     <script
       src="https://kit.fontawesome.com/7306ceb67d.js"

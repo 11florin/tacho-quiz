@@ -267,7 +267,7 @@ const QUESTIONS = [
     category: "road-safety",
     question: "What is the legal minimum tread depth for HGV tyres?",
     answers: ["1mm", "1.6mm", "2mm", "3mm"],
-    correct: 1,
+    correct: 0,
     explanation: "The legal minimum tread depth for HGV tyres is 1mm across the central three-quarters of the tread width and around the entire circumference. However, 2mm is commonly recommended for safety."
   },
   {

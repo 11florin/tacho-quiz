@@ -60,8 +60,6 @@ body {
 main {
   flex: 1 0 auto;
   width: 100%; 
-  max-width: 560px; 
-  margin: 0 auto;
   padding: 16px 12px;
 }
 
@@ -229,7 +227,7 @@ main {
 @media (min-width: 768px) {
   main {
     padding: 32px 24px;
-    max-width: 560px;
+    max-width: 750px;
     margin: 0 auto;
   }
 }
@@ -558,6 +556,7 @@ a.action-btn {
 .cat-btn[data-cat="cpc-mixed"] {
   background: rgba(251, 146, 60, 0.08);
   border-color: rgba(251, 146, 60, 0.25);
+  color: #fdba74;
 }
 .cat-btn[data-cat="cpc-mixed"]:hover,
 .cat-btn[data-cat="cpc-mixed"].selected {

@@ -1,7 +1,8 @@
 'use strict'
 
 // Questions generated with AI assistance (Claude) and manually verified for accuracy.
-// Additional validation will be done by my colleagues experienced HGV drivers to ensure correctness.
+ // Additional validation will be done by my colleagues, who are experienced HGV drivers, to ensure correctness.
+
 const QUESTIONS = [
   // DRIVING TIMES
   {
@@ -408,10 +409,10 @@ const QUESTIONS = [
   },
   {
     category: "cpc-mixed",
-    question: "What must a driver carry at all times while on duty?",
-    answers: ["Passport", "Driver CPC card and driving licence", "Vehicle logbook", "Insurance certificate"],
+    question: "What must a driver be able to produce or verify while on duty?",
+     answers: ["Passport", "Driving licence and valid Driver CPC qualification evidence", "Vehicle logbook", "Insurance certificate"],
     correct: 1,
-    explanation: "Drivers must carry their Driver CPC card (DCPC card) and their driving licence at all times when on duty. Enforcement officers can request to see both during a roadside check."
+    explanation: "A driver must hold the correct driving licence and have a valid Driver CPC qualification. This has traditionally been shown by a Driver Qualification Card (DQC), but CPC status may now also be checked through digital records during enforcement."
   },
   {
     category: "cpc-mixed",

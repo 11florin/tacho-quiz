@@ -81,6 +81,7 @@ tacho-quiz/
 
 ## Image Credits
 - [Favicon base image sourced from:](https://commons.wikimedia.org/wiki/File:Circle-icons-steeringwheel.svg)
+- [truck img:](https://commons.wikimedia.org/wiki/File:Gevara_refrigerator_truck_in_europe.jpg)
 
 
 ---

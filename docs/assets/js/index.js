@@ -7,9 +7,6 @@ const statusText = document.getElementById("status-text");
 // Get the Start Quiz button
 const startBtn = document.getElementById("start-btn");
 
-// Store the currently selected category button (none at the start)
-let selectedBtn = null;
-
 // Listen for clicks inside the category grid
 catGrid.addEventListener("click", function (e) {
   // Find the nearest category button that was clicked
@@ -21,18 +18,41 @@ catGrid.addEventListener("click", function (e) {
   const prev = document.querySelector(".cat-btn.selected");
   if (prev && prev !== btn) {
     prev.classList.remove("selected");
+    prev.setAttribute("aria-pressed", "false");
   }
 
   // Toggle selection for the clicked button
   if (btn.classList.contains("selected")) {
     btn.classList.remove("selected");
-    selectedBtn = null;
+    btn.setAttribute("aria-pressed", "false");
+
     statusText.textContent = "Select a category to begin";
     startBtn.disabled = true;
+
+    // Clear saved category
+    localStorage.removeItem("tq_category");
   } else {
     btn.classList.add("selected");
-    selectedBtn = btn;
+    btn.setAttribute("aria-pressed", "true");
+
     statusText.textContent = btn.textContent.trim() + " selected";
     startBtn.disabled = false;
+
+    // Save selected category
+    localStorage.setItem("tq_category", btn.dataset.cat);
   }
 });
+
+// Start Quiz button handler
+startBtn.addEventListener('click', function() {
+    const category = localStorage.getItem("tq_category");
+    if (!category) return;
+
+    // Reset quiz progress
+    localStorage.setItem("tq_questionIndex", "0");
+    localStorage.setItem("tq_score", "0");
+    localStorage.removeItem("tq_answer");
+
+    // Navigate to quiz page
+    window.location.href = "quiz.html";
+})

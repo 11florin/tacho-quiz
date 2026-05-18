@@ -13,8 +13,7 @@ catGrid.addEventListener("click", function (e) {
   const btn = e.target.closest(".cat-btn");
   if (!btn) return;
 
-  // Ensure only one button has the "selected" class at a time.
-  // Remove "selected" from any other button (covers cases where state may be out of sync).
+ // Deselect previous active button (visual + ARIA)
   const prev = document.querySelector(".cat-btn.selected");
   if (prev && prev !== btn) {
     prev.classList.remove("selected");
@@ -55,4 +54,4 @@ startBtn.addEventListener('click', function() {
 
     // Navigate to quiz page
     window.location.href = "quiz.html";
-})
+});

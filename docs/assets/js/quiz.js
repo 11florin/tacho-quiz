@@ -51,9 +51,6 @@ function loadQuestion() {
   nextBtn.textContent =
     questionIndex === total - 1 ? "SEE RESULTS" : "NEXT QUESTION";
 
-  // // Load current question, reset UI state and dynamically build the answer buttons
-  const q = questions[questionIndex];
-
   let i = 0;
   while (i < q.answers.length) {
     const btn = document.createElement("button");
@@ -91,6 +88,16 @@ function loadQuestion() {
     // Instant feedback
     explanationBox.style.display = "block";
     explanationBox.textContent = questions[questionIndex].explanation;
+
+    // Save answer for score page
+    answeredQuestions.push({
+        question: questions[questionIndex].question,
+        chosen: chosen,
+        correct: correct,
+        answers: questions[questionIndex].answers,
+        explanation: questions[questionIndex].explanation,
+    });
+    nextBtn.disabled = false;
   });
 }
 loadQuestion();

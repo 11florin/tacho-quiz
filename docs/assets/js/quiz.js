@@ -60,44 +60,56 @@ function loadQuestion() {
     answersList.appendChild(btn);
     i++;
   }
-  // Handle clicks on any answer button using event delegation on the answers list container
-  answersList.addEventListener("click", function (e) {
-    const btn = e.target.closest(".answer-btn");
-    if (!btn || btn.disabled) {
-        return;
-    }
-    const chosen = parseInt(btn.dataset.index, 10);
-    const correct = questions[questionIndex].correct;
 
-    // Disable all answer buttons
-    const allBtns = answersList.querySelectorAll(".answer-btn");
-    let i = 0;
-    while (i < allBtns.length) {
-        allBtns[i].disabled = true;
-        i++;
-    }
-
-    // Higlight correct  / wrong
-    btn.classList.add(chosen === correct ? "correct" : "wrong");
-    allBtns[correct].classList.add("correct");
-
-    if (chosen === correct) {
-        score++;
-    }
-
-    // Instant feedback
-    explanationBox.style.display = "block";
-    explanationBox.textContent = questions[questionIndex].explanation;
-
-    // Save answer for score page
-    answeredQuestions.push({
-        question: questions[questionIndex].question,
-        chosen: chosen,
-        correct: correct,
-        answers: questions[questionIndex].answers,
-        explanation: questions[questionIndex].explanation,
-    });
-    nextBtn.disabled = false;
-  });
 }
+
+// Handle clicks on any answer button using event delegation on the answers list container
+answersList.addEventListener("click", function (e) {
+  const btn = e.target.closest(".answer-btn");
+  if (!btn || btn.disabled) {
+    return;
+  }
+  const chosen = parseInt(btn.dataset.index, 10);
+  const correct = questions[questionIndex].correct;
+
+  // Disable all answer buttons
+  const allBtns = answersList.querySelectorAll(".answer-btn");
+  let i = 0;
+  while (i < allBtns.length) {
+    allBtns[i].disabled = true;
+    i++;
+  }
+
+  // Higlight correct  / wrong
+  btn.classList.add(chosen === correct ? "correct" : "wrong");
+  allBtns[correct].classList.add("correct");
+
+  if (chosen === correct) {
+    score++;
+  }
+
+  // Instant feedback
+  explanationBox.style.display = "block";
+  explanationBox.textContent = questions[questionIndex].explanation;
+
+  // Save answer for score page
+  answeredQuestions.push({
+    question: questions[questionIndex].question,
+    chosen: chosen,
+    correct: correct,
+    answers: questions[questionIndex].answers,
+    explanation: questions[questionIndex].explanation,
+  });
+  nextBtn.disabled = false;
+});
+
+//   Update progress and load next question
+nextBtn.addEventListener("click", function () {
+  questionIndex++;
+  localStorage.setItem("tq_questionIndex", questionIndex);
+  localStorage.setItem("tq_score", score);
+  localStorage.setItem("tq_answers", JSON.stringify(answeredQuestions));
+  loadQuestion();
+});
+
 loadQuestion();

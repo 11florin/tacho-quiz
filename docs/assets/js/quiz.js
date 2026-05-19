@@ -79,7 +79,18 @@ function loadQuestion() {
         allBtns[i].disabled = true;
         i++;
     }
-    
+
+    // Higlight correct  / wrong
+    btn.classList.add(chosen === correct ? "correct" : "wrong");
+    allBtns[correct].classList.add("correct");
+
+    if (chosen === correct) {
+        score++;
+    }
+
+    // Instant feedback
+    explanationBox.style.display = "block";
+    explanationBox.textContent = questions[questionIndex].explanation;
   });
 }
 loadQuestion();

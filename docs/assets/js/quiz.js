@@ -21,3 +21,14 @@ questions = questions.slice(0, 10);
 
 const total = questions.length;
 
+// Reset index/score when quiz page loads
+let questionIndex = 0;
+let score = 0;
+let answeredQuestions = [];
+
+const questionCounter = document.getElementById("question-counter");
+const questionText = document.getElementById("question-text");
+const answersList = document.getElementById("answers-list");
+const nextBtn = document.getElementById("next-btn");
+const explanationBox = document.getElementById("explanation-box");
+

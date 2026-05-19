@@ -63,5 +63,23 @@ function loadQuestion() {
     answersList.appendChild(btn);
     i++;
   }
+  // Handle clicks on any answer button using event delegation on the answers list container
+  answersList.addEventListener("click", function (e) {
+    const btn = e.target.closest(".answer-btn");
+    if (!btn || btn.disabled) {
+        return;
+    }
+    const chosen = parseInt(btn.dataset.index, 10);
+    const correct = questions[questionIndex].correct;
+
+    // Disable all answer buttons
+    const allBtns = answersList.querySelectorAll(".answer-btn");
+    let i = 0;
+    while (i < allBtns.length) {
+        allBtns[i].disabled = true;
+        i++;
+    }
+    
+  });
 }
 loadQuestion();

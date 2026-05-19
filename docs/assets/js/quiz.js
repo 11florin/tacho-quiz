@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 // Quiz Logic
 const LABELS = ["A", "B", "C", "D"];
@@ -7,14 +7,14 @@ const category = localStorage.getItem("tq_category");
 
 // If no category chosen, redirect home
 if (!category) {
-    window.location.href = "index.html";
+  window.location.href = "index.html";
 }
 
 // Filter question by category
 let questions = QUESTIONS.filter((q) => q.category === category);
 
 // Shuffle questions (random order)
-questions = questions.sort(() => Math.random() -0.5);
+questions = questions.sort(() => Math.random() - 0.5);
 
 // Select only 10 question (more to be added in the future)
 questions = questions.slice(0, 10);
@@ -32,3 +32,36 @@ const answersList = document.getElementById("answers-list");
 const nextBtn = document.getElementById("next-btn");
 const explanationBox = document.getElementById("explanation-box");
 
+function loadQuestion() {
+  if (questionIndex >= total) {
+    // quiz complete - go to score
+    localStorage.setItem("tq_score", score);
+    localStorage.setItem("tq_total", total);
+    localStorage.setItem("tq_answers", JSON.stringify(answeredQuestions));
+    window.location.href = "score.html";
+    return;
+  }
+  // Load and render current question and its answers
+  const q = questions[questionIndex];
+  questionCounter.textContent = `Question ${questionIndex + 1} of ${total}`;
+  questionText.textContent = q.question;
+  answersList.innerHTML = "";
+  nextBtn.disabled = true;
+  explanationBox.style.display = "none";
+  nextBtn.textContent =
+    questionIndex === total - 1 ? "SEE RESULTS" : "NEXT QUESTION";
+
+  // // Load current question, reset UI state and dynamically build the answer buttons
+  const q = questions[questionIndex];
+
+  let i = 0;
+  while (i < q.answers.length) {
+    const btn = document.createElement("button");
+    btn.className = "answer-btn";
+    btn.dataset.index = i;
+    btn.innerHTML = `<span class="answer-label">${LABELS[i]}.</span> ${q.answers[i]}`;
+    answersList.appendChild(btn);
+    i++;
+  }
+}
+loadQuestion();

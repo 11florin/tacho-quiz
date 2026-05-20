@@ -11,3 +11,10 @@ const scoreBar = document.getElementById("score-bar");
 const scorePercent = document.getElementById("score-percent");
 const scoreMessage = document.getElementById("score-message");
 const scoreBreakdown = document.getElementById("score-breakdown");
+
+//  Calculate score percentage and update UI
+const LABELS = ["A", "B", "C", "D"];
+const pct = Math.round((score / total) * 100);
+
+scoreValue.textContent = `${score} / ${total}`;
+scorePercent.textContent = `${pct}%`;

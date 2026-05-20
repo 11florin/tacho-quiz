@@ -125,6 +125,7 @@ header {
   transform-origin: center;
 }
 
+/* X animation generated with assistance from Claude AI */
 .hamburger[aria-expanded="true"] .bar:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -402,6 +403,9 @@ main {
     padding: 14px;
   }
 }
+
+/* Button state styling generated with assistance from Claude AI */
+
 /* Apply styles only when the button is active (not disabled). 
    Prevents hover, pointer and shadow effects on disabled buttons. */
 .action-btn:not(:disabled):not([disabled]) {

@@ -117,6 +117,59 @@ then rendered using Claude as a tool.
 ![Login Desktop](assets/wireframes/2-Login-desktop.png)
 ![About Desktop](assets/wireframes/1-About-desktop.png)
 
+---
+
+## Challenges and Solutions
+
+1. ### Unbalanced distribution of correct answers
+At an early stage of development, most questions had the correct answer set to option B.The approximate distribution was:
+- A: 7%
+- B: 65%
+- C: 27%
+- D: 2%
+
+### Issue: 
+Users could guess the correct answer simply by selecting option B, which undermined the purpose of the quiz.
+
+### Solution:
+GitHub Copilot automatically reviewed and reorganised the questions to achieve a more balanced spread of correct answers:
+- A: 23%
+- B: 2%
+- C: 27%
+- D: 33%
+This ensures a fairer and more realistic testing experience.
+
+2. ### Explanation box not displaying correctly
+The explanation box was implemented in JavaScript but had no corresponding CSS class, meaning it appeared unstyled or not at all.
+
+### Issue: 
+The element was visible in the DOM but had no visual presence.
+
+### Solution: 
+I created a dedicated .explanation-box class, added styling consistent with the project’s dark theme, and introduced a subtle fade‑in animation to improve user experience.
+
+3. ### Resolved Issue
+I identified that the forgot-link element in login.html was not centring correctly on larger screens. Although the .forgot-link class applied display: block;, the element also used the .link-btn class, which did not define a width. As a result, the button behaved like an inline element and did not expand to the full container width, preventing text-align: centre; from having any visible effect.
+
+### Solution:  
+I updated the .forgot-link class by adding width: 100%;, ensuring the element occupies the full available width and aligns correctly across all screen sizes.
+
+4. ### Resolved Category Bug
+I identified an issue where selecting any category briefly triggered the cpc-mixed button as well. This happened because the previous selection was not being cleared consistently before applying the new one, causing a momentary visual flash on the wrong button.
+
+### Solution:  
+I updated the category‑selection logic in index.js to ensure that all buttons have the selected class removed before applying it to the newly clicked category. This prevents any unintended activation and ensures that only the chosen category remains highlighted.
+
+### Testing:  
+I opened the categories section in the browser and selected each category individually to confirm that only the intended button stays active, with no temporary activation of cpc-mixed.
+
+5. ### Resolved Issue Summary (Navbar Remaining Open / Invisible Click Area)
+I identified an issue where the mobile navigation menu remained open but invisible when clicking near the top of the page. This caused unexpected behaviour, such as the About page being triggered when clicking outside the visible navbar.
+
+### Solution:  
+I reviewed the toggle logic and updated the event handling so that the menu closes correctly whenever the user interacts outside the navigation area. This prevents the hidden menu from staying active and ensures consistent behaviour across all pages. The fix was implemented with the assistance of copilot.
+---
+
 ## 📄 Licence
 
 This project is licensed under the **MIT Licence**.

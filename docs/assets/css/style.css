@@ -790,6 +790,16 @@ a.action-btn {
     font-size: 14px;
   }
 }
+.explanation-text {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--color-surface-raised);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
 
 /* login */
 .login-body {

@@ -68,4 +68,10 @@ if (answers.length > 0) {
     scoreBreakdown.appendChild(item);
     i++;
   }
+
+  // Add explanation text
+  const exp = document.createElement("p");
+  exp.className = "explanation-text";
+  exp.textContent = `Explanation: ${last.explanation}`;
+  scoreBreakdown.appendChild(exp);
 }

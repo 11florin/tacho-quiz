@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 // Retrieve stored quiz data from localStorage
 const score = parseInt(localStorage.getItem("tq_score") || "0", 10);
@@ -24,7 +24,22 @@ scorePercent.textContent = `${pct}%`;
 // setTimeout ensures the width change is detected as an animation.
 // Code from Claude AI
 requestAnimationFrame(() => {
-    setTimeout(() => {
-        scoreBar.style.width = pct + "%";
-    }, 100);
+  setTimeout(() => {
+    scoreBar.style.width = pct + "%";
+  }, 100);
 });
+
+//  Display a message based on the user's score
+let message = "";
+if (pct === 100) {
+  message = "💯 Perfect score! Outstanding!";
+} else if (pct >= 80) {
+    message = "👏 Great Job!";
+} else if (pct >= 60) {
+    message = "👍 Good effort! Keep practising.";
+} else if (pct >= 40) {
+    message = "📚 Keep studying - you can do it!";
+} else {
+    message = "💪 Don\'t give up - try again!"
+}
+scoreMessage.textContent = message;

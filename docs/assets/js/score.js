@@ -18,3 +18,13 @@ const pct = Math.round((score / total) * 100);
 
 scoreValue.textContent = `${score} / ${total}`;
 scorePercent.textContent = `${pct}%`;
+
+// Trigger score bar animation after initial render.
+// requestAnimationFrame waits for the browser to paint,
+// setTimeout ensures the width change is detected as an animation.
+// Code from Claude AI
+requestAnimationFrame(() => {
+    setTimeout(() => {
+        scoreBar.style.width = pct + "%";
+    }, 100);
+});

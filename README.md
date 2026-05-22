@@ -119,7 +119,7 @@ then rendered using Claude as a tool.
 
 ---
 
-## Challenges and Solutions
+## Bugs
 
 1. ### Unbalanced distribution of correct answers
 At an early stage of development, most questions had the correct answer set to option B.The approximate distribution was:

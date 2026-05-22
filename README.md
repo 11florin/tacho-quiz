@@ -98,27 +98,27 @@ then rendered using Claude as a tool.
 
 ### Mobile
 
-![Home Mobile](assets/wireframes/1-Home-mobile.png)
-![Quiz Mobile](assets/wireframes/2-Quiz-mobile.png)
-![Score Mobile](assets/wireframes/1-Score-mobile.png)
-![Login Mobile](assets/wireframes/2-Login-mobile.png)
-![About Mobile](assets/wireframes/1-About-mobile.png)
+![Home Mobile](docs/wireframe/1-Home-desktop.png)
+![Quiz Mobile](docs/wireframe/2-Quiz-mobile.png)
+![Score Mobile](docs/wireframe/3-Score-mobile.png)
+![Login Mobile](docs/wireframe/4-Login-mobile.png)
+![About Mobile](docs/wireframe/4-Login-mobile.png)
 
 ### Tablet
 
-![Home Tablet](assets/wireframes/1-Home-tablet.png)
-![Quiz Tablet](assets/wireframes/2-Quiz-tablet.png)
-![Score Tablet](assets/wireframes/1-Score-tablet.png)
-![Login Tablet](assets/wireframes/2-Login-tablet.png)
-![About Tablet](assets/wireframes/1-About-tablet.png)
+![Home Tablet](docs/wireframe/1-Home-tablet.png)
+![Quiz Tablet](docs/wireframe/2-Quiz-tablet.png)
+![Score Tablet](docs/wireframe/3-Score-tablet.png)
+![Login Tablet](docs/wireframe/4-Login-tablet.png)
+![About Tablet](docs/wireframe/5-About-tablet.png)
 
 ### Desktop
 
-![Home Desktop](assets/wireframes/1-Home-desktop.png)
-![Quiz Desktop](assets/wireframes/2-Quiz-desktop.png)
-![Score Desktop](assets/wireframes/1-Score-desktop.png)
-![Login Desktop](assets/wireframes/2-Login-desktop.png)
-![About Desktop](assets/wireframes/1-About-desktop.png)
+![Home Desktop](docs/wireframe/1-Home-desktop.png)
+![Quiz Desktop](docs/wireframe/2-Quiz-desktop.png)
+![Score Desktop](docs/wireframe/3-Score-desktop.png)
+![Login Desktop](docs/wireframe/4-Login-desktop.png)
+![About Desktop](docs/wireframe/5-About-desktop.png)
 
 ---
 

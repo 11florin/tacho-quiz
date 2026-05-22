@@ -3,7 +3,7 @@
 // Retrieve stored quiz data from localStorage
 const score = parseInt(localStorage.getItem("tq_score") || "0", 10);
 const total = parseInt(localStorage.getItem("tq_total") || "10", 10);
-const answers = JSON.parse(localStorage.getItem("tq_answers") || []);
+const answers = JSON.parse(localStorage.getItem("tq_answers") || "[]");
 
 // DOM elements for score display
 const scoreValue = document.getElementById("score-value");
@@ -14,9 +14,21 @@ const scoreBreakdown = document.getElementById("score-breakdown");
 
 //  Calculate score percentage and update UI
 const LABELS = ["A", "B", "C", "D"];
-const pct = Math.round((score / total) * 100);
 
-scoreValue.textContent = `${score} / ${total}`;
+// Applied the fix suggested by GitHub Copilot review.
+// Resolution implemented with assistance from Copilot AI.
+
+// Validate score and toatal to avoid NaN/Infinity
+const safeScore = Number.isFinite(score) ? score : 0;
+const safeTotal = Number.isFinite(total) && total > 0 ? total : 1;
+
+// Comute percentage
+let pct = Math.round((safeScore / safeTotal) * 100);
+
+// Clamp to [0, 100]
+pct = Math.min(Math.max(pct, 0), 100);
+// Update UI
+scoreValue.textContent = `${safeScore} / ${safeTotal}`;
 scorePercent.textContent = `${pct}%`;
 
 // Trigger score bar animation after initial render.
@@ -64,7 +76,14 @@ if (answers.length > 0) {
     item.className =
       "breakdown-item" + (isCorrect ? " correct" : wasChosen ? " wrong" : "");
 
-    item.innerHTML = `<span class="answer-label">${LABELS[i]}.</span>${last.answers[i]}`;
+    // item.innerHTML = `<span class="answer-label">${LABELS[i]}.</span>${last.answers[i]}`;
+    // Applied GitHub Copilot’s security recommendation by replacing innerHTML with safe DOM node creation (textContent + createTextNode) to prevent HTML injection. Fix implemented with assistance from Copilot AI.
+    const label = document.createElement("span");
+    label.className = "answer-label";
+    label.textContent = `${LABELS[i]}.`;
+
+    item.appendChild(label);
+    item.appendChild(document.createTextNode(last.answers[i]));
     scoreBreakdown.appendChild(item);
     i++;
   }
@@ -78,11 +97,14 @@ if (answers.length > 0) {
 
 // Save the completed quiz attempt to history
 //  Used for future statistics or review pages
-const history = JSON.parse(localStorage.getItem("tq_history") || "[]");
-history.push({
-  category: localStorage.getItem("tq-category") || "unknown",
-  score: score,
-  total: total,
-  date: new Date().toLocaleDateString(),
-});
-localStorage.setItem("tq_history", JSON.stringify(history));
+if (!localStorage.getItem("tq_saved")) {
+  const history = JSON.parse(localStorage.getItem("tq_history") || "[]");
+  history.push({
+    category: localStorage.getItem("tq_category") || "unknown",
+    score: score,
+    total: total,
+    date: new Date().toLocaleDateString(),
+  });
+  localStorage.setItem("tq_history", JSON.stringify(history));
+  localStorage.setItem("tq_saved", "1"); // mark as saved
+}

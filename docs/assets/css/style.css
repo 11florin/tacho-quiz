@@ -800,6 +800,11 @@ a.action-btn {
   border-color: var(--color-correct-border);
   color: var(--color-correct);
 }
+.breakdown-item.wrong {
+  background: var(--color-wrong-bg);
+  border-color: var(--color-wrong-border);
+  color: var(--color-wrong);
+}
 .explanation-text {
   margin-top: 1rem;
   padding: 1rem;

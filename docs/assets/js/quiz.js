@@ -109,6 +109,7 @@ nextBtn.addEventListener("click", function () {
   localStorage.setItem("tq_questionIndex", questionIndex);
   localStorage.setItem("tq_score", score);
   localStorage.setItem("tq_answers", JSON.stringify(answeredQuestions));
+  localStorage.removeItem("tq_saved");
   loadQuestion();
 });
 

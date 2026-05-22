@@ -75,3 +75,14 @@ if (answers.length > 0) {
   exp.textContent = `Explanation: ${last.explanation}`;
   scoreBreakdown.appendChild(exp);
 }
+
+// Save the completed quiz attempt to history
+//  Used for future statistics or review pages
+const history = JSON.parse(localStorage.getItem("tq_history") || "[]");
+history.push({
+  category: localStorage.getItem("tq-category") || "unknown",
+  score: score,
+  total: total,
+  date: new Date().toLocaleDateString(),
+});
+localStorage.setItem("tq_history", JSON.stringify(history));

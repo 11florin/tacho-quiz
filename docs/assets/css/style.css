@@ -790,6 +790,16 @@ a.action-btn {
     font-size: 14px;
   }
 }
+.breakdown-item .answer-label {
+  font-weight: 700;
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+.breakdown-item.correct {
+  background: var(--color-correct-bg);
+  border-color: var(--color-correct-border);
+  color: var(--color-correct);
+}
 .explanation-text {
   margin-top: 1rem;
   padding: 1rem;

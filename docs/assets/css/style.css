@@ -760,6 +760,36 @@ a.action-btn {
     padding: 0 16px 8px;
   }
 }
+.breakdown-title {
+  font-size: 12px;
+  color: var(--color-text-dim);
+  margin-bottom: 8px;
+  padding-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+@media (min-width: 480px) {
+  .breakdown-title {
+    font-size: 14px;
+  }
+}
+.breakdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+  background: var(--color-surface-raised);
+}
+@media (min-width: 480px) {
+  .breakdown-item {
+    font-size: 14px;
+  }
+}
 
 /* login */
 .login-body {

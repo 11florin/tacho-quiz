@@ -34,12 +34,38 @@ let message = "";
 if (pct === 100) {
   message = "💯 Perfect score! Outstanding!";
 } else if (pct >= 80) {
-    message = "👏 Great Job!";
+  message = "👏 Great Job!";
 } else if (pct >= 60) {
-    message = "👍 Good effort! Keep practising.";
+  message = "👍 Good effort! Keep practising.";
 } else if (pct >= 40) {
-    message = "📚 Keep studying - you can do it!";
+  message = "📚 Keep studying - you can do it!";
 } else {
-    message = "💪 Don\'t give up - try again!"
+  message = "💪 Don\'t give up - try again!";
 }
 scoreMessage.textContent = message;
+
+// Build a breakdown of the last answered question
+// Shows correct answer, chosen answer and explanation
+if (answers.length > 0) {
+  const last = answers[answers.length - 1];
+  const title = document.createElement("p");
+  title.className = "breakdown-title";
+  title.textContent = "Last question breakdown:";
+  scoreBreakdown.appendChild(title);
+
+  // Loop through all answer options
+  let i = 0;
+  while (i < last.answers.length) {
+    const item = document.createElement("div");
+    const isCorrect = i === last.correct;
+    const wasChosen = i === last.chosen;
+
+    // Apply correct/wrong styling
+    item.className =
+      "breakdown-item" + (isCorrect ? " correct" : wasChosen ? " wrong" : "");
+
+    item.innerHTML = `<span class="answer-label">${LABELS[i]}.</span>${last.answers[i]}`;
+    scoreBreakdown.appendChild(item);
+    i++;
+  }
+}

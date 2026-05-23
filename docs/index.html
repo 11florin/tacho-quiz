@@ -125,6 +125,20 @@
         </div>
       </div>
 
+      <!-- Bets score -->
+      <div class="best-score-box" id="best-score-box" style="display: none">
+        <div class="best-score-icon">🏆</div>
+        <div class="best-score-info">
+          <span class="best-score-label">Best Score</span>
+          <span class="best-score-value" id="best-pct">0%</span>
+        </div>
+        <div class="best-score-details">
+          <span id="best-fraction">0 / 10</span>
+          <span id="best-cat"></span>
+          <span id="best-date"></span>
+        </div>
+      </div>
+
       <!-- Categories -->
       <section class="categories-section">
         <div class="screen-header">
@@ -149,44 +163,58 @@
         </div>
 
         <div class="screen-footer">
-          <p id="status-text" class="status-text" aria-live="polite">Select a category to begin</p>
+          <p id="status-text" class="status-text" aria-live="polite">
+            Select a category to begin
+          </p>
           <button id="start-btn" class="action-btn" disabled>START QUIZ</button>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="copyright">
-        &copy;Florin Albu
-      </div>
+      <div class="copyright">&copy;Florin Albu</div>
       <div class="footer-paragraph">
-        <p>
-          Learn tacho. Build confidence.
-        </p>
+        <p>Learn tacho. Build confidence.</p>
       </div>
       <div class="social-networks">
-            <ul>
-              <li>
-                <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" rel="noopener noreferrer"
-                  ><i class="fa-brands fa-facebook"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://www.twitter.com/" target="_blank" aria-label="Twitter" rel="noopener noreferrer"
-                  ><i class="fa-brands fa-x-twitter"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" rel="noopener noreferrer"
-                  ><i class="fa-brands fa-instagram"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/" target="_blank" aria-label="Youtube" rel="noopener noreferrer"
-                  ><i class="fa-brands fa-square-youtube"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
+        <ul>
+          <li>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              aria-label="Facebook"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.twitter.com/"
+              target="_blank"
+              aria-label="Twitter"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              aria-label="Instagram"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              aria-label="Youtube"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-square-youtube"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
     </footer>
     <script src="assets/js/index.js"></script>
     <script src="assets/js/navbar.js"></script>

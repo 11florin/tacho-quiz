@@ -65,24 +65,53 @@ Testing documentation will be added later in the project, including:
 
 ## 📁 Project Structure (Initial)
 
-tacho-quiz/
+TACHO-QUIZ/
 |
-|-- index.html
-|-- assets/
-│ |-- css/
-│ |-- js/
-│ |-- images/
-│ |-- audio/
-|-- data/
-|-- docs/
+| -- docs/
+│   | -- assets/
+│   │   |-- audio/
+│   │   |-- css/
+│   │   │   |-- style.css
+│   │   |-- images/
+│   │   │   |-- icons/
+│   │   │   │   |-- android-chrome-192x192.png
+│   │   │   │   |-- android-chrome-512x512.png
+│   │   │   │   |-- apple-touch-icon.png
+│   │   │   │   |-- favicon-16x16.png
+│   │   │   │   |-- favicon-32x32.png
+│   │   │   │   |-- favicon.ico
+│   │   │   │   |-- site.webmanifest
+│   │   │   |-- img/
+│   │   │   │   |-- truck-img2.png
+│   │   │   |-- logo/
+│   │   │       |-- logo.png
+│   │   |-- js/
+│   │       |-- index.js
+│   │       |-- navbar.js
+│   │       |-- questions.js
+│   │       |-- quiz.js
+│   │       |-- score.js
+│   │
+│   |-- wireframe/
+│   │   |-- (wireframe images)
+│   │
+│   |-- about.html
+│   |-- confirm.html
+│   |-- index.html
+│   |-- login.html
+│   |-- quiz.html
+│   |-- score.html
+│
+|-- LICENSE
+|-- .gitignore
 |-- README.md
 
 ---
 
 ## Image Credits
 
-- [Favicon base image sourced from:](https://commons.wikimedia.org/wiki/File:Circle-icons-steeringwheel.svg)
-- [truck img:](https://commons.wikimedia.org/wiki/File:Gevara_refrigerator_truck_in_europe.jpg)
+- [Favicon base image sourced from](https://commons.wikimedia.org/wiki/File:Circle-icons-steeringwheel.svg)
+- [truck img](https://commons.wikimedia.org/wiki/File:Gevara_refrigerator_truck_in_europe.jpg)
 
 ---
 
@@ -98,11 +127,11 @@ then rendered using Claude as a tool.
 
 ### Mobile
 
-![Home Mobile](docs/wireframe/1-Home-desktop.png)
+![Home Mobile](docs/wireframe/1-Home-mobile.png)
 ![Quiz Mobile](docs/wireframe/2-Quiz-mobile.png)
 ![Score Mobile](docs/wireframe/3-Score-mobile.png)
 ![Login Mobile](docs/wireframe/4-Login-mobile.png)
-![About Mobile](docs/wireframe/4-Login-mobile.png)
+![About Mobile](docs/wireframe/5-About-mobile.png)
 
 ### Tablet
 

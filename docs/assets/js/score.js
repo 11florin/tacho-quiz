@@ -112,11 +112,11 @@ if (!localStorage.getItem("tq_saved")) {
 // Best Score
 const prevBest = parseInt(localStorage.getItem("tq_best_pct") || "0", 10);
 
-// 
+// It only updates if the current score is higher
 if (pct > prevBest) {
   localStorage.setItem("tq_best_pct", pct);
   localStorage.setItem("tq_best_score", safeScore);
   localStorage.setItem("tq_best_total", safeTotal);
   localStorage.setItem("tq_best_category", localStorage.getItem("tq_category") || "");
-  localStorage.setItem("tq_best_date", new Date().toLocaleDateString());
+  localStorage.setItem("tq_best_date", new Date().toLocaleDateString("en-GB"));
 }

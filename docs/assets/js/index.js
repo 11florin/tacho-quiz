@@ -1,11 +1,30 @@
 "use strict";
 
+// Best Score display
+// Read the best score from localStorage
+const bestPct = localStorage.getItem("tq_best_pct");
+const bestScore = localStorage.getItem("tq_best_score");
+const bestTotal = localStorage.getItem("tq_best_total");
+const bestCategory = localStorage.getItem("tq_best_category");
+const bestDate = localStorage.getItem("tq_best_date");
+
 // Get the category grid container element
 const catGrid = document.getElementById("cat-grid");
 // Get the text element that displays the current status
 const statusText = document.getElementById("status-text");
 // Get the Start Quiz button
 const startBtn = document.getElementById("start-btn");
+
+const bestScoreBox = document.getElementById("best-score-box");
+
+// It only displays if there is a saved best score
+if (bestPct !== null && bestScoreBox) {
+  bestScoreBox.style.display = "flex";
+  document.getElementById("best-pct").textContent = bestPct + "%";
+  document.getElementById("best-fraction").textContent = bestScore + " / " + bestTotal;
+  document.getElementById("best-cat").textContent = bestCategory.replace(/-/g, " ");
+  document.getElementById("best-date").textContent = bestDate;
+}
 
 // Listen for clicks inside the category grid
 catGrid.addEventListener("click", function (e) {

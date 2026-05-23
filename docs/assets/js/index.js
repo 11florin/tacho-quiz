@@ -1,13 +1,6 @@
 "use strict";
 
-// Best Score display
-// Read the best score from localStorage
-const bestPct = localStorage.getItem("tq_best_pct");
-const bestScore = localStorage.getItem("tq_best_score");
-const bestTotal = localStorage.getItem("tq_best_total");
-const bestCategory = localStorage.getItem("tq_best_category");
-const bestDate = localStorage.getItem("tq_best_date");
-
+localStorage.removeItem("tq_category");
 // Get the category grid container element
 const catGrid = document.getElementById("cat-grid");
 // Get the text element that displays the current status
@@ -15,16 +8,35 @@ const statusText = document.getElementById("status-text");
 // Get the Start Quiz button
 const startBtn = document.getElementById("start-btn");
 
+// Best Scores
+const bestScores   = JSON.parse(localStorage.getItem("tq_best_scores") || "{}");
 const bestScoreBox = document.getElementById("best-score-box");
 
-// It only displays if there is a saved best score
-if (bestPct !== null && bestScoreBox) {
-  bestScoreBox.style.display = "flex";
-  document.getElementById("best-pct").textContent = bestPct + "%";
-  document.getElementById("best-fraction").textContent = bestScore + " / " + bestTotal;
-  document.getElementById("best-cat").textContent = bestCategory.replace(/-/g, " ");
-  document.getElementById("best-date").textContent = bestDate;
+// Function that updates the best score banner
+// It is called upon selection of each category
+function updateBestScoreBanner(category) {
+  // If there is no banner in HTML, exit
+  if (!bestScoreBox) return;
+
+  const data = bestScores[category];
+
+  if (data) {
+    // There is a best score for this category - display it
+    bestScoreBox.style.display = "flex";
+    document.getElementById("best-pct").textContent      = data.pct + "%";
+    document.getElementById("best-fraction").textContent = data.score + " / " + data.total;
+    // "driving-times" → "driving times"
+    document.getElementById("best-cat").textContent      = category.replace(/-/g, " ");
+    document.getElementById("best-date").textContent     = data.date;
+  } else {
+    // There is no best score for this category - hide banner
+    bestScoreBox.style.display = "none";
+  }
 }
+
+// On load, the banner is hidden (no category selected yet)
+if (bestScoreBox) bestScoreBox.style.display = "none";
+
 
 // Listen for clicks inside the category grid
 catGrid.addEventListener("click", function (e) {
@@ -49,6 +61,8 @@ catGrid.addEventListener("click", function (e) {
 
     // Clear saved category
     localStorage.removeItem("tq_category");
+    // // Hide the banner when no category is selected
+    if (bestScoreBox) bestScoreBox.style.display = "none";
   } else {
     btn.classList.add("selected");
     btn.setAttribute("aria-pressed", "true");
@@ -58,6 +72,8 @@ catGrid.addEventListener("click", function (e) {
 
     // Save selected category
     localStorage.setItem("tq_category", btn.dataset.cat);
+
+    updateBestScoreBanner(btn.dataset.cat);
   }
 });
 

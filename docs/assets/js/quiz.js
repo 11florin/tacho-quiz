@@ -5,6 +5,10 @@ const LABELS = ["A", "B", "C", "D"];
 
 const category = localStorage.getItem("tq_category");
 
+if (category) {
+  localStorage.setItem("tq_quiz_category", category);
+}
+
 // If no category chosen, redirect home
 if (!category) {
   window.location.href = "index.html";

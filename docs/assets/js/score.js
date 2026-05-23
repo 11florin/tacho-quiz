@@ -110,13 +110,21 @@ if (!localStorage.getItem("tq_saved")) {
 }
 
 // Best Score
-const prevBest = parseInt(localStorage.getItem("tq_best_pct") || "0", 10);
+// Read the played category (saved by quiz.js)
+const playedCategory = localStorage.getItem("tq_quiz_category") || "unknown";
+// Read the JSON object with all the best scores per category.
+const bestScores = JSON.parse(localStorage.getItem("tq_best_scores") || "{}");
+// Read the previous best score for this category (or 0)
+const prevBest = bestScores[playedCategory] ? bestScores[playedCategory].pct : 0;
 
 // It only updates if the current score is higher
 if (pct > prevBest) {
-  localStorage.setItem("tq_best_pct", pct);
-  localStorage.setItem("tq_best_score", safeScore);
-  localStorage.setItem("tq_best_total", safeTotal);
-  localStorage.setItem("tq_best_category", localStorage.getItem("tq_category") || "");
-  localStorage.setItem("tq_best_date", new Date().toLocaleDateString("en-GB"));
+  bestScores[playedCategory] = {
+    pct: pct,
+    score: safeScore,
+    total: safeTotal,
+    date: new Date().toLocaleDateString("en-GB"),
+  };
+  // Save the entire object back to localStorage as JSON
+  localStorage.setItem("tq_best_scores", JSON.stringify(bestScores));
 }

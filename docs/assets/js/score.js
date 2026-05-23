@@ -108,3 +108,15 @@ if (!localStorage.getItem("tq_saved")) {
   localStorage.setItem("tq_history", JSON.stringify(history));
   localStorage.setItem("tq_saved", "1"); // mark as saved
 }
+
+// Best Score
+const prevBest = parseInt(localStorage.getItem("tq_best_pct") || "0", 10);
+
+// 
+if (pct > prevBest) {
+  localStorage.setItem("tq_best_pct", pct);
+  localStorage.setItem("tq_best_score", safeScore);
+  localStorage.setItem("tq_best_total", safeTotal);
+  localStorage.setItem("tq_best_category", localStorage.getItem("tq_category") || "");
+  localStorage.setItem("tq_best_date", new Date().toLocaleDateString());
+}

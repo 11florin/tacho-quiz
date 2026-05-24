@@ -1,6 +1,6 @@
 "use strict";
 
-localStorage.removeItem("tq_category");
+// localStorage.removeItem("tq_category");   // removed as per github copilot code review
 // Get the category grid container element
 const catGrid = document.getElementById("cat-grid");
 // Get the text element that displays the current status
@@ -9,12 +9,15 @@ const statusText = document.getElementById("status-text");
 const startBtn = document.getElementById("start-btn");
 
 // Best Scores
-const bestScores = JSON.parse(localStorage.getItem("tq_best_scores") || "{}");
 const bestScoreBox = document.getElementById("best-score-box");
 
 // Function that updates the best score banner
 // It is called upon selection of each category
 function updateBestScoreBanner(category) {
+  // refresh best score data on category selection to avoid stale localStorage values
+  // code removed and add here as per github copilot review
+  const bestScores = JSON.parse(localStorage.getItem("tq_best_scores") || "{}");
+
   // If there is no banner in HTML, exit
   if (!bestScoreBox) return;
 

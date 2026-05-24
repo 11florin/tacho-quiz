@@ -103,7 +103,7 @@ if (!localStorage.getItem("tq_saved")) {
     category: localStorage.getItem("tq_category") || "unknown",
     score: score,
     total: total,
-    date: new Date().toLocaleDateString(),
+    date: new Date().toLocaleDateString("en-GB"),
   });
   localStorage.setItem("tq_history", JSON.stringify(history));
   localStorage.setItem("tq_saved", "1"); // mark as saved

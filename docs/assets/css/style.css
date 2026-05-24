@@ -401,7 +401,7 @@ main {
 .best-score-value {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #facc15
+  color: #facc15;
 }
 .best-score-details {
   display: flex;

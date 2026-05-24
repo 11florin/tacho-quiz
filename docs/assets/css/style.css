@@ -368,6 +368,53 @@ main {
   letter-spacing: 0.04em;
 }
 
+/* Best Score box*/
+.best-score-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto 1.5rem;
+  padding: 1rem 1.5rem;
+  max-width: 480px;
+  background: rgba(250, 204, 21, 0.08);
+  border: 1px solid rgba(250, 204, 21, 0.3);
+  box-shadow: 0 0 12px rgba(0, 140, 255, 0.5);
+  border-radius: 50%;
+  color: var(--color-text);
+}
+.best-score-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+.best-score-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.best-score-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+.best-score-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #facc15;
+}
+.best-score-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  /* margin-left: auto; */
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-transform: capitalize;
+}
+
+
 /* screen footer */
 .screen-footer {
   padding: 12px;

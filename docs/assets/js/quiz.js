@@ -5,6 +5,10 @@ const LABELS = ["A", "B", "C", "D"];
 
 const category = localStorage.getItem("tq_category");
 
+if (category) {
+  localStorage.setItem("tq_quiz_category", category);
+}
+
 // If no category chosen, redirect home
 if (!category) {
   window.location.href = "index.html";
@@ -60,7 +64,6 @@ function loadQuestion() {
     answersList.appendChild(btn);
     i++;
   }
-
 }
 
 // Handle clicks on any answer button using event delegation on the answers list container

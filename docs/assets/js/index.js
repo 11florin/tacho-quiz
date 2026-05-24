@@ -9,7 +9,7 @@ const statusText = document.getElementById("status-text");
 const startBtn = document.getElementById("start-btn");
 
 // Best Scores
-const bestScores   = JSON.parse(localStorage.getItem("tq_best_scores") || "{}");
+const bestScores = JSON.parse(localStorage.getItem("tq_best_scores") || "{}");
 const bestScoreBox = document.getElementById("best-score-box");
 
 // Function that updates the best score banner
@@ -23,11 +23,15 @@ function updateBestScoreBanner(category) {
   if (data) {
     // There is a best score for this category - display it
     bestScoreBox.style.display = "flex";
-    document.getElementById("best-pct").textContent      = data.pct + "%";
-    document.getElementById("best-fraction").textContent = data.score + " / " + data.total;
+    document.getElementById("best-pct").textContent = data.pct + "%";
+    document.getElementById("best-fraction").textContent =
+      data.score + " / " + data.total;
     // "driving-times" → "driving times"
-    document.getElementById("best-cat").textContent      = category.replace(/-/g, " ");
-    document.getElementById("best-date").textContent     = data.date;
+    document.getElementById("best-cat").textContent = category.replace(
+      /-/g,
+      " ",
+    );
+    document.getElementById("best-date").textContent = data.date;
   } else {
     // There is no best score for this category - hide banner
     bestScoreBox.style.display = "none";
@@ -35,8 +39,9 @@ function updateBestScoreBanner(category) {
 }
 
 // On load, the banner is hidden (no category selected yet)
-if (bestScoreBox) bestScoreBox.style.display = "none";
-
+if (bestScoreBox) {
+  bestScoreBox.style.display = "none";
+}
 
 // Listen for clicks inside the category grid
 catGrid.addEventListener("click", function (e) {
@@ -44,7 +49,7 @@ catGrid.addEventListener("click", function (e) {
   const btn = e.target.closest(".cat-btn");
   if (!btn) return;
 
- // Deselect previous active button (visual + ARIA)
+  // Deselect previous active button (visual + ARIA)
   const prev = document.querySelector(".cat-btn.selected");
   if (prev && prev !== btn) {
     prev.classList.remove("selected");
@@ -78,15 +83,15 @@ catGrid.addEventListener("click", function (e) {
 });
 
 // Start Quiz button handler
-startBtn.addEventListener('click', function() {
-    const category = localStorage.getItem("tq_category");
-    if (!category) return;
+startBtn.addEventListener("click", function () {
+  const category = localStorage.getItem("tq_category");
+  if (!category) return;
 
-    // Reset quiz progress
-    localStorage.setItem("tq_questionIndex", "0");
-    localStorage.setItem("tq_score", "0");
-    localStorage.removeItem("tq_answer");
+  // Reset quiz progress
+  localStorage.setItem("tq_questionIndex", "0");
+  localStorage.setItem("tq_score", "0");
+  localStorage.removeItem("tq_answers");
 
-    // Navigate to quiz page
-    window.location.href = "quiz.html";
+  // Navigate to quiz page
+  window.location.href = "quiz.html";
 });

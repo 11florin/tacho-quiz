@@ -115,7 +115,9 @@ const playedCategory = localStorage.getItem("tq_quiz_category") || "unknown";
 // Read the JSON object with all the best scores per category.
 const bestScores = JSON.parse(localStorage.getItem("tq_best_scores") || "{}");
 // Read the previous best score for this category (or 0)
-const prevBest = bestScores[playedCategory] ? bestScores[playedCategory].pct : 0;
+const prevBest = bestScores[playedCategory]
+  ? bestScores[playedCategory].pct
+  : 0;
 
 // It only updates if the current score is higher
 if (pct > prevBest) {

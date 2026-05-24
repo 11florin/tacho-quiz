@@ -64,7 +64,6 @@ function loadQuestion() {
     answersList.appendChild(btn);
     i++;
   }
-
 }
 
 // Handle clicks on any answer button using event delegation on the answers list container

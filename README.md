@@ -4,22 +4,67 @@ A simple, interactive quiz application designed to provide users with a clean, e
 
 ---
 
-## 🎯 Project Purpose
+## 🎯 Target Audience
 
-The aim of this project is to create a responsive and accessible quiz that allows users to test their knowledge, receive instant feedback, and view their final score at the end. The application is designed with clarity, usability, and simplicity in mind.
+Tacho Quiz is designed for the following groups of users:
+- Professional drivers preparing for CPC examinations
+- New drivers who want to understand tachograph rules, driving times, and rest periods.
+- Transport company trainees undergoing internal training programmes.
+- Anyone interested in testing their knowledge of European road‑transport regulations.
+
+The application is built using a mobile‑first approach, making it ideal for users who access the quiz on their phones during breaks or study sessions.
 
 ---
 
-## 🧩 Features (Planned)
+## UX Design
+### 1. Strategy Plane
+The purpose of the project is to provide a fast, clear, and accessible quiz that helps users learn driving and rest regulations.
+User goals:
 
-- Start screen with a clear call‑to‑action
-- One question displayed at a time
-- Clickable answer options
-- Immediate feedback (correct/incorrect)
-- Final score screen
-- Mobile‑friendly layout
-- Optional timer
-- Best score saved in local storage
+- Start the quiz immediately
+- Receive instant feedback
+- View their final score
+- Navigate easily between pages
+#### Developer goals:
+- Simple interface
+- Clear structure
+- Smooth mobile experience
+
+### 2. Scope Plane
+Included features:
+- Question categories
+- Randomised questions
+- Instant feedback
+- Final score
+- Score history
+- Explanations for answers
+#### Excluded features:
+- User accounts
+- Online leaderboards
+- Cloud saving
+
+### 3. Structure Plane
+Primary user flow:
+- Home -> choose category
+- Quiz -> answer questions + receive feedback
+- Score -> view results + breakdown
+- Optional -> Login / About
+
+Navigation is linear and intuitive, preventing users from breaking the flow.
+
+### 4. Skeleton Plane
+Layout decisions:
+- Mobile‑first
+- Large, square buttons
+- High contrast
+- Centred text
+- Consistent spacing
+
+### 5. Surface Plane
+- Dark, modern colour palette
+- Highlight colours for feedback
+- Clean sans‑serif fonts
+- Minimalist icon set
 
 ---
 

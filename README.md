@@ -4,6 +4,20 @@ A simple, interactive quiz application designed to provide users with a clean, e
 
 ---
 
+## Suitability for Purpose
+Tacho Quiz has been designed to meet the expectations and needs of its intended users. The interface is simple, distraction‑free, and optimised for mobile use, making it ideal for drivers and trainees who need quick access to learning tools. The quiz structure  one question at a time, clear answer buttons, and instant feedback  ensures that users can focus without confusion.
+
+The design choices support the project's purpose:
+
+- Mobile‑first layout ensures accessibility for users who primarily study on their phones.
+- Clear visual hierarchy helps users understand where to click and what to do next.
+- Immediate feedback reinforces learning and keeps users engaged.
+- Straightforward navigation prevents frustration and reduces cognitive load.
+
+A typical user would not feel that "there is a much better way to do this", as the interface follows established UX conventions and avoids unnecessary complexity.
+
+---
+
 ## 🎯 Target Audience
 
 Tacho Quiz is designed for the following groups of users:

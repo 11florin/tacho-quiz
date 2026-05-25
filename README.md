@@ -68,6 +68,46 @@ Layout decisions:
 
 ---
 
+## 🧭 Navigation
+
+-Dark, modern colour palette
+- Highlight colours for feedback
+- Clean sans‑serif fonts
+- Minimalist iconography
+
+---
+ 
+## 😀 Ease of Use
+- Intuitive interface requiring no documentation
+- Tested with real users (friends/family)
+- No aggressive pop‑ups
+- No autoplay audio
+- All inputs clearly labelled with placeholders
+- Consistent UX patterns inspired by GoodUI
+- Users maintain full control at all times
+
+---
+
+## Information Architecture
+
+- Information is logically structured
+- Clear headers for each section
+- Straightforward, easy‑to‑read language
+- Interactivity used where helpful (quiz, feedback)
+- No content feels out of place
+
+---
+
+## Defensive Design
+- Users cannot break the site through unexpected actions
+- Forms handle invalid or empty input gracefully
+- Back/Forward navigation does not break functionality
+- No console errors during interaction
+- Clear feedback for disallowed actions
+- Quiz logic prevents multiple answers or skipping
+
+---
+
 ## 📚 User Stories (Summary)
 
 - As a user, I want to start the quiz easily so that I can begin without confusion.

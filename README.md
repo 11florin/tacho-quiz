@@ -229,6 +229,22 @@ I reviewed the toggle logic and updated the event handling so that the menu clos
 - Introduced a tq_saved flag to prevent duplicate history entries
 - Added validation and clamping for score percentage calculations
 
+### Inconsistent state handling, stale best‑score data, and minor CSS error
+
+### Issue
+
+- tq_category was being cleared automatically on every index page load, causing state corruption when multiple tabs were open.
+- updateBestScoreBanner() used a cached version of tq_best_scores, resulting in stale best‑score data when navigating back or after updates.
+- Date formatting was inconsistent across best‑score and history entries (en-GB vs browser default).
+- A missing semicolon in .best-score-value introduced a minor CSS inconsistency.
+
+### Solution
+
+- Removed automatic clearing of tq_category to prevent cross‑tab state corruption.
+- Updated updateBestScoreBanner() to re‑parse tq_best_scores from localStorage on each call.
+- Standardised all date formatting to en‑GB for consistent UI output.
+- Added the missing semicolon in .best-score-value to align with the stylesheet’s formatting standards.
+
 ---
 
 ## 📄 Licence

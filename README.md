@@ -15,6 +15,16 @@ Tacho Quiz is designed for the following groups of users:
 The application is built using a mobile‑first approach, making it ideal for users who access the quiz on their phones during breaks or study sessions.
 
 ---
+## 📚 User Stories (Summary)
+
+- As a user, I want to start the quiz easily so that I can begin without confusion.
+- As a user, I want to see one question at a time so that I can focus clearly.
+- As a user, I want to select answers with a single click so that the quiz feels intuitive.
+- As a user, I want immediate feedback so that I know if I was correct.
+- As a user, I want to see my final score so that I can understand my performance.
+- As a user, I want the quiz to work on mobile devices so that I can play anywhere.
+
+---
 
 ## UX Design
 ### 1. Strategy Plane
@@ -106,26 +116,50 @@ Layout decisions:
 - Clear feedback for disallowed actions
 - Quiz logic prevents multiple answers or skipping
 
+
+## Responsive Design
+- Fully functional from 360px to 4K
+- Mobile‑first CSS
+- Media queries for tablet and desktop
+- Responsive images maintaining aspect ratio
+- Tested on Chrome, Firefox, Edge
 ---
 
-## 📚 User Stories (Summary)
+## Colour Scheme & Typography
+- Strong contrast between text and background
+- Cohesive, modern colour palette
+- Complementary sans‑serif fonts
+- Text never overlaps images or backgrounds
 
-- As a user, I want to start the quiz easily so that I can begin without confusion.
-- As a user, I want to see one question at a time so that I can focus clearly.
-- As a user, I want to select answers with a single click so that the quiz feels intuitive.
-- As a user, I want immediate feedback so that I know if I was correct.
-- As a user, I want to see my final score so that I can understand my performance.
-- As a user, I want the quiz to work on mobile devices so that I can play anywhere.
+--- 
+
+## HTML5 Usage
+- HTML validated using W3C Validator
+- Semantic elements used appropriately (header, main, section, footer)
+- All images include descriptive alt text
+- Clean, consistent indentation
+- Logical document structure
 
 ---
+
+## CSS3 Usage
+- Custom CSS demonstrating proficiency
+- Validated using Jigsaw
+- Organised into clear, commented sections
+- No unnecessary duplication
+- No inline CSS
+- Consistent indentation
 
 ## 🛠️ Technologies Used
 
 - **HTML5**
 - **CSS3**
 - **JavaScript (ES6+)**
+- **Prettier** code formatter ensuring consistent styling across HTML, CSS, and JavaScript files
 - **Git & GitHub** for version control
-- **Copilot** for automated code review and debug
+- **GitHub Pages** deployment of the live site
+- **GitHub Copilot (VS Code)** AI‑assisted code suggestions and development workflow support
+- **GitHub Copilot Code Review** automated pull‑request reviews and code quality insights
 - **Claude** Quiz questions were AI-generated and manually reviewed for accuracy.
 
 ---
@@ -137,14 +171,14 @@ A live link will be added here once deployment is complete.
 
 ---
 
-## 🧪 Testing (To Be Added)
-
-Testing documentation will be added later in the project, including:
-
-- Manual testing
-- Browser compatibility
-- Responsiveness checks
-- Accessibility checks
+## Testing Implementation
+- Extensive manual testing for HTML/CSS/JS
+- Device testing (mobile, tablet, desktop)
+- Browser testing (Chrome, Firefox, Edge)
+- Responsiveness testing
+- Input validation testing
+- Navigation testing
+- Score and breakdown logic testing
 
 ---
 

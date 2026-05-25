@@ -80,10 +80,15 @@ Layout decisions:
 
 ## 🧭 Navigation
 
--Dark, modern colour palette
-- Highlight colours for feedback
-- Clean sans‑serif fonts
-- Minimalist iconography
+Navigation throughout the site is designed to be intuitive and consistent:
+- A persistent navigation bar is available across all pages.
+- A mobile menu toggle allows easy access on small screens.
+- Users never need the browser Back button to move through the site.
+- All external links open in a new tab using target="_blank".
+- No broken links — all navigation paths were manually tested.
+- Clear page structure ensures users always know where they are and where they can go next.
+
+This approach ensures a smooth and predictable browsing experience.
 
 ---
  

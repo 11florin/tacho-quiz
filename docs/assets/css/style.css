@@ -121,7 +121,8 @@ header {
   border-radius: 2px;
   transition:
     transform 0.28s ease,
-    opacity 0.2s, width 0.25s;
+    opacity 0.2s,
+    width 0.25s;
   transform-origin: center;
 }
 
@@ -214,6 +215,31 @@ header {
   #nav-menu ul li a:hover,
   #nav-menu ul li a.active {
     background: transparent;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 40px;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    margin-left: 0;
+    flex: 0 0 auto;
+  }
+
+  #nav-menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #nav-menu ul {
+    width: fit-content;
+    gap: 36px;
   }
 }
 

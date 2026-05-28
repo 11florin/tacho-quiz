@@ -218,28 +218,23 @@ header {
   }
 }
 
-@media (min-width: 1024px) {
+ @media (min-width: 1024px) {
   .navbar {
     width: 100%;
-    max-width: 1280px;
+    max-width: none;
     padding: 0 40px;
-    justify-content: space-between;
+    display: flex;
+    align-items: center;
   }
 
   .nav-logo {
     margin-left: 0;
-    flex: 0 0 auto;
   }
 
   #nav-menu {
-    flex: 1;
+    margin-left: auto;
     display: flex;
     justify-content: flex-end;
-  }
-
-  #nav-menu ul {
-    width: fit-content;
-    gap: 36px;
   }
 }
 

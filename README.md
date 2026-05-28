@@ -185,19 +185,58 @@ This approach ensures a smooth and predictable browsing experience.
 
 ## 🚀 Deployment
 
-The project will be deployed using **GitHub Pages**.  
-A live link will be added here once deployment is complete.
+The project is deployed using GitHub Pages.
+
+### Live Site
+
+[tacho-quiz](https://11florin.github.io/tacho-quiz/)
 
 ---
 
 ## Testing Implementation
-- Extensive manual testing for HTML/CSS/JS
-- Device testing (mobile, tablet, desktop)
-- Browser testing (Chrome, Firefox, Edge)
-- Responsiveness testing
-- Input validation testing
-- Navigation testing
-- Score and breakdown logic testing
+
+### 1.Functional testing
+
+| Feature | Test Performed | Expected Result | Actual Result |
+|--------|----------------|----------------|---------------|
+| Start Quiz button | Click from home page | Quiz begins | Passed |
+| Category selection | Select each category | Only selected category highlights | Passed |
+| Answer buttons | Click each option | Feedback shown instantly | Passed |
+| Score page | Finish quiz | Score and breakdown displayed | Passed |
+| Navigation menu | Open/close on all pages | Menu toggles correctly | Passed |
+| Login form | Submit empty fields | Error message shown | Passed |
+
+### 2.Responsive Testing
+
+Tested on:
+
+- Android (Chrome, Firefox)
+- iPhone (Safari)
+- iPad
+- Windows desktop (Chrome, Edge, Firefox)
+- macOS (Safari, Chrome)
+
+All layouts behaved correctly from 360px to 4K.
+
+### 3.Browser Compatibility
+
+- Chrome 
+- Firefox 
+- Edge 
+- Safari 
+
+### 4.Input Validation Testing
+
+- Empty form fields
+- Invalid email formats
+- Rapid clicking
+- Multiple answer attempts
+
+All handled correctly.
+
+### 5. Unfixed Bugs
+
+At the time of submission, no known unfixed bugs remain.
 
 ---
 

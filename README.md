@@ -94,6 +94,15 @@ Layout decisions:
 
 ---
 
+## Image Presentation
+- Consistent graphic style and colour
+- Background never distracts from content
+- Images maintain aspect ratio
+- Optimised file sizes
+- Alternative formats where needed
+
+---
+
 ## 🧭 Navigation
 
 Navigation throughout the site is designed to be intuitive and consistent:
@@ -189,6 +198,17 @@ This approach ensures a smooth and predictable browsing experience.
 ## 🚀 Deployment
 
 The project is deployed using GitHub Pages.
+
+### Deployment Steps
+
+1. Open the GitHub repository
+2. Go to Settings -> Pages
+3. Select:  
+- Branch: main  
+- Folder: /docs  
+4. Save
+
+5. GitHub generates the live link
 
 ### Live Site
 

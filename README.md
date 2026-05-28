@@ -383,6 +383,14 @@ I reviewed the toggle logic and updated the event handling so that the menu clos
 - Standardised all date formatting to en‑GB for consistent UI output.
 - Added the missing semicolon in .best-score-value to align with the stylesheet’s formatting standards.
 
+### Issue
+
+- Navbar desktop layout was not stretching correctly
+
+### Solution
+
+Navbar desktop layout was not stretching correctly at larger screens > 1024px, which caused the logo and menu to appear too close or not align as expected. Updated the desktop media query so the navigation spans the available width and the menu is pushed to the right consistently.
+
 ---
 
 ## 📄 Licence

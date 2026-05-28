@@ -432,6 +432,14 @@ Navbar desktop layout was not stretching correctly at larger screens > 1024px, w
 
 ---
 
+## Version Control
+
+Version control was managed using Git and GitHub throughout the development process.
+
+- Frequent, meaningful commits were made for each feature, fix, or improvement.
+- Commit messages follow a clear pattern ("Fix navbar toggle behaviour", "Add score breakdown logic").
+- No large, monolithic commits the history clearly reflects the development process.
+
 ## 📄 Licence
 
 This project is licensed under the **MIT Licence**.

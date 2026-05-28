@@ -5,7 +5,9 @@ A simple, interactive quiz application designed to provide users with a clean, e
 ---
 
 ## Suitability for Purpose
-Tacho Quiz has been designed to meet the expectations and needs of its intended users. The interface is simple, distraction‑free, and optimised for mobile use, making it ideal for drivers and trainees who need quick access to learning tools. The quiz structure  one question at a time, clear answer buttons, and instant feedback  ensures that users can focus without confusion.
+Tacho Quiz has been designed to meet the expectations and needs of its intended users. The interface is simple, distraction‑free, and optimised for mobile use, making it ideal for drivers and trainees who need quick access to learning tools. 
+The quiz structure:
+One question at a time, clear answer buttons, and instant feedback  ensures that users can focus without confusion.
 
 The design choices support the project's purpose:
 
@@ -95,6 +97,7 @@ Layout decisions:
 ## 🧭 Navigation
 
 Navigation throughout the site is designed to be intuitive and consistent:
+
 - A persistent navigation bar is available across all pages.
 - A mobile menu toggle allows easy access on small screens.
 - Users never need the browser Back button to move through the site.
@@ -195,7 +198,7 @@ The project is deployed using GitHub Pages.
 
 ## Testing Implementation
 
-### 1.Functional testing
+### 1. Functional testing
 
 | Feature | Test Performed | Expected Result | Actual Result |
 |--------|----------------|----------------|---------------|
@@ -206,7 +209,7 @@ The project is deployed using GitHub Pages.
 | Navigation menu | Open/close on all pages | Menu toggles correctly | Passed |
 | Login form | Submit empty fields | Error message shown | Passed |
 
-### 2.Responsive Testing
+### 2. Responsive Testing
 
 Tested on:
 
@@ -218,14 +221,14 @@ Tested on:
 
 All layouts behaved correctly from 360px to 4K.
 
-### 3.Browser Compatibility
+### 3. Browser Compatibility
 
 - Chrome 
 - Firefox 
 - Edge 
 - Safari 
 
-### 4.Input Validation Testing
+### 4. Input Validation Testing
 
 - Empty form fields
 - Invalid email formats
@@ -438,7 +441,16 @@ Version control was managed using Git and GitHub throughout the development proc
 
 - Frequent, meaningful commits were made for each feature, fix, or improvement.
 - Commit messages follow a clear pattern ("Fix navbar toggle behaviour", "Add score breakdown logic").
-- No large, monolithic commits the history clearly reflects the development process.
+
+---
+
+## Comments in Code
+Comments were added throughout the JavaScript and CSS files where relevant.
+
+- Comments explain why certain decisions were made, not just what the code does.
+- Complex logic (score calculation, category selection, localStorage handling) includes explanatory notes.
+
+---
 
 ## 📄 Licence
 

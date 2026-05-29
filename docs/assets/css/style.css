@@ -540,7 +540,7 @@ a.action-btn {
   min-height: 52px;
   transition:
     background 0.15s,
-    border-color 0.2s color 0.15s;
+    border-color 0.2s, color 0.15s;
 }
 @media (min-width: 480px) {
   .cat-btn {
@@ -747,6 +747,7 @@ a.action-btn {
   padding: 14px;
   background: var(--color-surface-raised);
   border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary);
   border-radius: var(--radius);
   font-size: 14px;
   line-height: 1.6;
@@ -877,6 +878,7 @@ a.action-btn {
   margin-top: 1rem;
   padding: 1rem;
   background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
   border-left: 4px solid var(--color-primary);
   border-radius: var(--radius);
   font-size: 14px;

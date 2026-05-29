@@ -35,6 +35,7 @@
   - [Responsive Testing](#2-responsive-testing)
   - [Browser Compatibility](#3-browser-compatibility)
   - [Input Validation Testing](#4-input-validation-testing)  
+  - [Validation](#5-validation) 
   - [Unfixed Bugs](#5-unfixed-bugs)  
 - [Project Structure](#-project-structure)  
 - [Images Source](#images-source)  
@@ -323,7 +324,25 @@ All layouts behaved correctly from 360px to 4K.
 
 All handled correctly.
 
-### 5. Unfixed Bugs
+### 5. Validation
+**HTML Validation**  
+- All HTML files were tested using the W3C Markup   Validation Service.  
+- No errors were found.
+
+**CSS Validation**
+- The stylesheet passed the W3C CSS Validator with no errors.
+
+**Lighthouse Testing**  
+- Lighthouse was run in Chrome DevTools on the deployed site.
+
+- Performance: 87
+- Accessibility: 95
+- Best Practices: 100
+- SEO: 100
+
+![Lighthouse Results](docs/assets/images/screenshot/lighthouse.png)
+
+### 6. Unfixed Bugs
 
 At the time of submission, no known unfixed bugs remain.
 

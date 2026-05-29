@@ -1,6 +1,10 @@
-# Table of Contents
+# Tacho Quiz
 
+## Table of Contents
+
+- [Live Link](#live-link)  
 - [Tacho Quiz Overview](#tacho-quiz-overview)  
+- [Responsive App](#responsive-app)  
 - [Accessibility](#accessibility)  
 - [Suitability for Purpose](#suitability-for-purpose)  
 - [Target Audience](#-target-audience)  
@@ -43,9 +47,21 @@
 
 ---
 
+## Live Link
+
+[Tacho-Quiz](https://11florin.github.io/tacho-quiz/)
+
+---
+
 ## Tacho Quiz Overview
 
 Tacho Quiz is a mobile‑first, browser‑based learning tool designed to help drivers and trainees improve their understanding of tachograph rules, driving limits, and rest regulations. The application delivers a clean, intuitive interface with one‑question‑at‑a‑time progression, instant feedback, and a fully responsive layout. Built as part of the Code Institute Full Stack Software Development programme, the project focuses on clarity, accessibility, and a smooth user experience across all devices.
+
+---
+
+## Responsive App
+
+![Responsive App](docs/assets/images/screenshot/screenshot.png)
 
 ---
 
@@ -162,7 +178,7 @@ Navigation throughout the site is designed to be intuitive and consistent:
 - A mobile menu toggle allows easy access on small screens.
 - Users never need the browser Back button to move through the site.
 - All external links open in a new tab using target="_blank".
-- No broken links — all navigation paths were manually tested.
+- No broken links all navigation paths were manually tested.
 - Clear page structure ensures users always know where they are and where they can go next.
 
 This approach ensures a smooth and predictable browsing experience.
@@ -335,6 +351,8 @@ TACHO-QUIZ/
 │   │   │   │   |-- truck-img2.png
 │   │   │   |-- logo/
 │   │   │       |-- logo.png
+|   |   |   |-- screenshot/
+|   |   |       |-- screenshot.png
 │   │   |-- js/
 │   │       |-- index.js
 │   │       |-- navbar.js
@@ -402,106 +420,63 @@ then rendered using Claude as a tool.
 ---
 
 ## Bugs
+### 1. Unbalanced distribution of correct answers
+**Issue:** Most questions originally had the correct answer set to option B, allowing users to guess without understanding.  
+**Fix:** GitHub Copilot reorganised the answer keys to achieve a balanced distribution across A, B, C, and D.
 
-1. ### Unbalanced distribution of correct answers
-   At an early stage of development, most questions had the correct answer set to option B.The approximate distribution was:
+### 2. Explanation box not displaying
+**Issue:** The explanation element existed in the DOM but had no CSS styling, making it invisible.  
+**Fix:** Added a dedicated .explanation-box class with styling and a subtle fade‑in animation.
 
-- A: 7%
-- B: 65%
-- C: 27%
-- D: 2%
+### 3. Incorrect centring of the “forgot password” link
+**Issue:** The element behaved like an inline element due to missing width, preventing proper centring.
+**Fix:** Added width: 100% to .forgot-link to ensure consistent alignment.
 
-### Issue:
+### 4. Category selection triggering the wrong button
+**Issue:** Selecting a category briefly activated the cpc-mixed button due to inconsistent clearing of previous selections.  
+**Fix:** Updated the selection logic to remove all active states before applying the new one.
 
-Users could guess the correct answer simply by selecting option B, which undermined the purpose of the quiz.
+### 5. Mobile navbar remaining open invisibly
+**Issue:** The mobile menu stayed active but hidden, causing unexpected clicks on underlying elements.  
+**Fix:** Improved toggle logic so the menu closes correctly when clicking outside the navigation area.
 
-### Solution:
+### 6. Issues identified by GitHub Copilot Code Review
+**Problems:**
 
-GitHub Copilot automatically reviewed and reorganised the questions to achieve a more balanced spread of correct answers:
+inconsistent localStorage keys
 
-- A: 23%
-- B: 2%
-- C: 27%
-- D: 33%
-  This ensures a fairer and more realistic testing experience.
+unsafe JSON parsing
 
-2. ### Explanation box not displaying correctly
-   The explanation box was implemented in JavaScript but had no corresponding CSS class, meaning it appeared unstyled or not at all.
+potential HTML injection
 
-### Issue:
+missing .breakdown-item.wrong styling
 
-The element was visible in the DOM but had no visual presence.
+duplicate history entries
 
-### Solution:
+invalid score percentage values
 
-I created a dedicated .explanation-box class, added styling consistent with the project’s dark theme, and introduced a subtle fade‑in animation to improve user experience.
+**Fixes:**
 
-3. ### Resolved Issue
-   I identified that the forgot-link element in login.html was not centring correctly on larger screens. Although the .forgot-link class applied display: block;, the element also used the .link-btn class, which did not define a width. As a result, the button behaved like an inline element and did not expand to the full container width, preventing text-align: centre; from having any visible effect.
+standardised keys
 
-### Solution:
+added safe JSON fallback
 
-I updated the .forgot-link class by adding width: 100%;, ensuring the element occupies the full available width and aligns correctly across all screen sizes.
+replaced innerHTML with textContent
 
-4. ### Resolved Category Bug
-   I identified an issue where selecting any category briefly triggered the cpc-mixed button as well. This happened because the previous selection was not being cleared consistently before applying the new one, causing a momentary visual flash on the wrong button.
+added missing CSS class
 
-### Solution:
+introduced tq_saved flag
 
-I updated the category‑selection logic in index.js to ensure that all buttons have the selected class removed before applying it to the newly clicked category. This prevents any unintended activation and ensures that only the chosen category remains highlighted.
+validated and clamped score calculations
 
-### Testing:
+### 7. Inconsistent state handling and stale best‑score data
+**Issue:** tq_category was cleared on page load, best‑score data was cached, and date formatting was inconsistent.  
+**Fix:** Removed automatic clearing, re‑parsed best scores on each call, and standardised all dates to en‑GB.
 
-I opened the categories section in the browser and selected each category individually to confirm that only the intended button stays active, with no temporary activation of cpc-mixed.
+### 8. Desktop navbar not stretching correctly
+**Issue:** At widths above 1024px, the navbar did not span the full layout.  
+**Fix:** Updated the desktop media query to ensure proper spacing and alignment.
 
-5. ### Resolved Issue Summary (Navbar Remaining Open / Invisible Click Area)
-   I identified an issue where the mobile navigation menu remained open but invisible when clicking near the top of the page. This caused unexpected behaviour, such as the About page being triggered when clicking outside the visible navbar.
-
-### Solution:
-
-I reviewed the toggle logic and updated the event handling so that the menu closes correctly whenever the user interacts outside the navigation area. This prevents the hidden menu from staying active and ensures consistent behaviour across all pages. The fix was implemented with the assistance of copilot.
-
-6. ### Issues identified by GitHub Copilot Code Review
-
-- Inconsistent localStorage key usage (tq-category vs tq_category)
-- Unsafe JSON parsing for tq_answers
-- Potential HTML injection risk caused by using innerHTML in the breakdown section
-- Missing CSS styling for .breakdown-item.wrong
-- Duplicate history entries when refreshing score.html
-- Invalid score percentage values (NaN/Infinity) when total was zero or corrupted
-
-### Fixes implemented
-
-- Standardised localStorage key names (tq_category)
-- Added safe JSON fallback ("[]")
-- Replaced innerHTML with textContent and createTextNode for secure DOM rendering
-- Added missing .breakdown-item.wrong styling using existing colour variables
-- Introduced a tq_saved flag to prevent duplicate history entries
-- Added validation and clamping for score percentage calculations
-
-### Inconsistent state handling, stale best‑score data, and minor CSS error
-
-### Issue
-
-- tq_category was being cleared automatically on every index page load, causing state corruption when multiple tabs were open.
-- updateBestScoreBanner() used a cached version of tq_best_scores, resulting in stale best‑score data when navigating back or after updates.
-- Date formatting was inconsistent across best‑score and history entries (en-GB vs browser default).
-- A missing semicolon in .best-score-value introduced a minor CSS inconsistency.
-
-### Solution
-
-- Removed automatic clearing of tq_category to prevent cross‑tab state corruption.
-- Updated updateBestScoreBanner() to re‑parse tq_best_scores from localStorage on each call.
-- Standardised all date formatting to en‑GB for consistent UI output.
-- Added the missing semicolon in .best-score-value to align with the stylesheet’s formatting standards.
-
-### Issue
-
-- Navbar desktop layout was not stretching correctly
-
-### Solution
-
-Navbar desktop layout was not stretching correctly at larger screens > 1024px, which caused the logo and menu to appear too close or not align as expected. Updated the desktop media query so the navigation spans the available width and the menu is pushed to the right consistently.
 
 ---
 
@@ -530,7 +505,6 @@ This project is licensed under the **MIT Licence**.
 
 ## Future Enhancements
 
-- Additional question categories
+- Additional question / categories
 - Sound effects toggle
-- Dark mode
 - Animated transitions

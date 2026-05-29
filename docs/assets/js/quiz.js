@@ -38,7 +38,7 @@ const explanationBox = document.getElementById("explanation-box");
 
 function loadQuestion() {
   if (questionIndex >= total) {
-    // quiz complete - go to score
+    // quiz complete -> go to score
     localStorage.setItem("tq_score", score);
     localStorage.setItem("tq_total", total);
     localStorage.setItem("tq_answers", JSON.stringify(answeredQuestions));

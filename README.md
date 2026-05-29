@@ -339,12 +339,12 @@ All handled correctly.
 **Lighthouse Testing**  
 - Lighthouse was run in Chrome DevTools on the deployed site.
 
-- Performance: 87
+- Performance: 84
 - Accessibility: 95
 - Best Practices: 100
 - SEO: 100
 
-![Lighthouse Results](docs/assets/images/screenshot/lighthouse.png)
+![Lighthouse Results](docs/assets/images/screenshot/lighthouse2.png)
 
 ### 6. Unfixed Bugs
 

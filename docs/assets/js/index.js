@@ -29,7 +29,7 @@ function updateBestScoreBanner(category) {
     document.getElementById("best-pct").textContent = data.pct + "%";
     document.getElementById("best-fraction").textContent =
       data.score + " / " + data.total;
-    // "driving-times" → "driving times"
+    // "driving-times" -> "driving times"
     document.getElementById("best-cat").textContent = category.replace(
       /-/g,
       " ",

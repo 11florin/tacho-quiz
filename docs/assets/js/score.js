@@ -77,7 +77,7 @@ if (answers.length > 0) {
       "breakdown-item" + (isCorrect ? " correct" : wasChosen ? " wrong" : "");
 
     // item.innerHTML = `<span class="answer-label">${LABELS[i]}.</span>${last.answers[i]}`;
-    // Applied GitHub Copilot’s security recommendation by replacing innerHTML with safe DOM node creation (textContent + createTextNode) to prevent HTML injection. Fix implemented with assistance from Copilot AI.
+    // Applied GitHub Copilot's security recommendation by replacing innerHTML with safe DOM node creation (textContent + createTextNode) to prevent HTML injection. Fix implemented with assistance from Copilot AI.
     const label = document.createElement("span");
     label.className = "answer-label";
     label.textContent = `${LABELS[i]}.`;

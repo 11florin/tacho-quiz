@@ -35,8 +35,9 @@
   - [Responsive Testing](#2-responsive-testing)
   - [Browser Compatibility](#3-browser-compatibility)
   - [Input Validation Testing](#4-input-validation-testing)  
-  - [Validation](#5-validation) 
-  - [Unfixed Bugs](#5-unfixed-bugs)  
+  - [Validation](#5-validation)
+  - [Contrast & Accessibility Validation](#6-contrast--accessibility-validation) 
+  - [Unfixed Bugs](#7-unfixed-bugs)  
 - [Project Structure](#-project-structure)  
 - [Images Source](#images-source)  
 - [Wireframes](#wireframes)  
@@ -346,7 +347,12 @@ All handled correctly.
 
 ![Lighthouse Results](docs/assets/images/screenshot/lighthouse2.png)
 
-### 6. Unfixed Bugs
+### 6. Contrast & Accessibility Validation
+- All primary text, button, and feedback colour combinations were tested using the WebAIM Contrast Checker.
+- All combinations passed WCAG 2.1 AA requirements, and several achieved AAA.
+
+
+### 7. Unfixed Bugs
 
 At the time of submission, no known unfixed bugs remain.
 

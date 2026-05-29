@@ -1,6 +1,7 @@
 # Table of Contents
 
-- [Tacho Quiz](#tacho-Quiz)  
+- [Tacho Quiz Overview](#tacho-quiz-overview)  
+- [Accessibility](#accessibility)  
 - [Suitability for Purpose](#suitability-for-purpose)  
 - [Target Audience](#-target-audience)  
 - [User Stories](#-user-stories)  
@@ -42,9 +43,15 @@
 
 ---
 
-## Tacho Quiz
+## Tacho Quiz Overview
 
-A simple, interactive quiz application designed to provide users with a clean, enjoyable, and mobile‑friendly experience. The project is part of the Code Institute Full Stack Software Development programme (Milestone Project 2).
+Tacho Quiz is a mobile‑first, browser‑based learning tool designed to help drivers and trainees improve their understanding of tachograph rules, driving limits, and rest regulations. The application delivers a clean, intuitive interface with one‑question‑at‑a‑time progression, instant feedback, and a fully responsive layout. Built as part of the Code Institute Full Stack Software Development programme, the project focuses on clarity, accessibility, and a smooth user experience across all devices.
+
+---
+
+## Accessibility
+
+Tacho Quiz follows core accessibility principles to provide a clear and comfortable experience for users. The interface uses a high‑contrast colour palette, readable typography, and large tap targets suitable for mobile devices. All images include descriptive alt text, and the layout is fully responsive across different screen sizes. The design avoids flashing elements or distracting animations, supporting users with visual or cognitive sensitivities.
 
 ---
 

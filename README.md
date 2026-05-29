@@ -1,4 +1,48 @@
-# Tacho Quiz
+# Table of Contents
+
+- [Tacho Quiz](#tacho-Quiz)  
+- [Suitability for Purpose](#suitability-for-purpose)  
+- [Target Audience](#-target-audience)  
+- [User Stories](#-user-stories)  
+- [UX Design](#ux-design)  
+  - [Strategy Plane](#1-strategy-plane)  
+    - [Developer goals](#developer-goals)  
+  - [Scope Plane](#2-scope-plane)  
+    - [Excluded features](#excluded-features)  
+  - [Structure Plane](#3-structure-plane)  
+  - [Skeleton Plane](#4-skeleton-plane)  
+  - [Surface Plane](#5-surface-plane)  
+- [Image Presentation](#image-presentation)  
+- [Navigation](#-navigation)  
+- [Ease of Use](#-ease-of-use)  
+- [Information Architecture](#information-architecture)  
+- [Defensive Design](#defensive-design)
+- [Responsive Design](#responsive-design)  
+- [Colour Scheme & Typography](#colour-scheme-&-typography)  
+- [HTML5 Usage](#html5-usage)  
+- [CSS3 Usage](#css3-usage)  
+- [Technologies Used](#-technologies-used)  
+- [Deployment](#-deployment)  
+  - [Deployment Steps](#deployment-steps)  
+  - [Live Site](#live-site)  
+- [Testing Implementation](#testing-implementation)  
+  - [Functional testing](#1-functional-testing)  
+  - [Responsive Testing](#2-responsive-testing)
+  - [Browser Compatibility](#3-browser-compatibility)
+  - [Input Validation Testing](#4-input-validation-testing)  
+  - [Unfixed Bugs](#5-unfixed-bugs)  
+- [Project Structure](#-project-structure)  
+- [Images Source](#images-source)  
+- [Wireframes](#wireframes)  
+- [Bugs](#bugs)  
+- [Version Control](#version-control)  
+- [Comments in Code](#comments-in-code)  
+- [Licence](#-licence)  
+- [Future Enhancements](#future-enhancements)  
+
+---
+
+## Tacho Quiz
 
 A simple, interactive quiz application designed to provide users with a clean, enjoyable, and mobile‑friendly experience. The project is part of the Code Institute Full Stack Software Development programme (Milestone Project 2).
 
@@ -144,7 +188,6 @@ This approach ensures a smooth and predictable browsing experience.
 - Forms handle invalid or empty input gracefully
 - Back/Forward navigation does not break functionality
 - No console errors during interaction
-- Clear feedback for disallowed actions
 - Quiz logic prevents multiple answers or skipping
 
 
@@ -263,7 +306,7 @@ At the time of submission, no known unfixed bugs remain.
 
 ---
 
-## 📁 Project Structure (Initial)
+## 📁 Project Structure
 
 TACHO-QUIZ/
 |
@@ -308,7 +351,7 @@ TACHO-QUIZ/
 
 ---
 
-## Image Credits
+## Images Source
 
 - [Favicon base image sourced from](https://commons.wikimedia.org/wiki/File:Circle-icons-steeringwheel.svg)
 - [truck img](https://commons.wikimedia.org/wiki/File:Gevara_refrigerator_truck_in_europe.jpg)

@@ -332,6 +332,10 @@ All handled correctly.
 **CSS Validation**
 - The stylesheet passed the W3C CSS Validator with no errors.
 
+**JavaScript (JSHint)**
+- All JavaScript files were tested using JSHint.
+- No major issues were reported. Minor ES6 warnings are expected and do not affect functionality.
+
 **Lighthouse Testing**  
 - Lighthouse was run in Chrome DevTools on the deployed site.
 

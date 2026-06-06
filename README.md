@@ -100,14 +100,59 @@ Tacho Quiz is designed for the following groups of users:
 The application is built using a mobile‑first approach, making it ideal for users who access the quiz on their phones during breaks or study sessions.
 
 ---
-## 📚 User Stories (Summary)
+## 📚 User Stories
 
-- As a user, I want to start the quiz easily so that I can begin without confusion.
-- As a user, I want to see one question at a time so that I can focus clearly.
-- As a user, I want to select answers with a single click so that the quiz feels intuitive.
-- As a user, I want immediate feedback so that I know if I was correct.
-- As a user, I want to see my final score so that I can understand my performance.
-- As a user, I want the quiz to work on mobile devices so that I can play anywhere.
+### 1. User Story:
+* As a user, I want to start the quiz easily so that I can begin without confusion.
+
+### Acceptance Criteria
+* The Start button is clearly visible on the home page.
+* The Start button becomes active only after selecting a category.
+* Clicking the Start button loads quiz.html without errors.
+* The selected category is correctly passed to the quiz page via localStorage.  
+
+### 2. User Story:
+* As a user, I want to see one question at a time so that I can focus clearly.
+
+### Acceptance Criteria
+* Only one question is displayed on the screen at any moment.
+* The next question appears only after the user selects an answer.
+* The question counter updates correctly ("3 / 10").
+* No scrolling or hidden questions appear on the page.
+
+### 3. User Story:
+* As a user, I want to select answers with a single click so that the quiz feels intuitive.
+
+### Acceptance Criteria
+* Each answer option is clickable.
+* Clicking an answer immediately disables all other options.
+* The selected answer is highlighted visually.
+* The button cannot be clicked twice or changed after selection.
+
+### 4. User Story:
+* As a user, I want immediate feedback so that I know if I was correct.
+
+### Acceptance Criteria
+* Correct answers turn green (.correct class).
+* Wrong answers turn red (.wrong class).
+* The explanation box appears after selecting an answer.
+* Feedback appears within 0.5 seconds of clicking.
+
+### 5. User Story:
+* As a user, I want to see my final score so that I can understand my performance.
+
+### Acceptance Criteria
+* The final score page loads automatically after the last question.
+* The score is calculated correctly (percentage + raw score).
+* The Best Score is saved and displayed if it is higher than previous attempts.
+
+### User Story:
+* As a user, I want the quiz to work on mobile devices so that I can play anywhere.
+
+### Acceptance Criteria
+* All pages display correctly on screens from 360px and up.
+* Buttons are large enough for touch interaction.
+* Navigation menu works correctly on mobile (hamburger menu).
 
 ---
 

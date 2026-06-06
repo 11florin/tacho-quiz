@@ -343,7 +343,12 @@ All handled correctly.
 
 **JavaScript (JSHint)**
 - All JavaScript files were tested using JSHint.
-- No major issues were reported. Minor ES6 warnings are expected and do not affect functionality.
+- No major issues were reported. Minor ES6 warnings are expected and do not affect functionality.  
+[index.js](docs/assets/images/img-validator/JSHint-img/index.js.png)  
+[navbar.js](docs/assets/images/img-validator/JSHint-img/nvabar.js.png)  
+[questions.js](docs/assets/images/img-validator/JSHint-img/questions.js.png)  
+[quiz.js](docs/assets/images/img-validator/JSHint-img/quiz.js.png)  
+[score.js](docs/assets/images/img-validator/JSHint-img/score.js.png)  
 
 **Lighthouse Testing**  
 - Lighthouse was run in Chrome DevTools on the deployed site.

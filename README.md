@@ -232,6 +232,35 @@ This approach ensures a smooth and predictable browsing experience.
 
 --- 
 
+## 🎨 Colour Palette (HEX & RGBA Values)
+
+| **Variable Name** | **Colour Value** | **Usage** |
+| --- | --- | --- |
+| **--color-primary** | ``#60a5fa`` | Primary accent, highlights |
+| **--color-primary-dark** | ``#3b82f6`` | Buttons, borders, strong accents |
+| **--color-primary-glow** | ``rgba(96,165,250,0.15)`` | Glow effects |
+| **--color-text** | ``#f1f5f9`` | Main text |
+| **--color-text-muted** | ``#94a3b8`` | Secondary text |
+| **--color-text-dim** | ``#64748b`` | Low‑priority text |
+| **--color-bg** | ``#0f172a`` | Main background |
+| **--color-surface** | ``#1e293b`` | Cards, containers, navbar |
+| **--color-surface-raised** | ``#263348`` | Elevated surfaces |
+| **--color-border** | ``#2d3f55`` | Standard borders |
+| **--color-border-strong** | ``#3d5068`` | Stronger borders |
+| **--color-disabled** | ``#374151`` | Disabled buttons |
+| **--color-disabled-text** | ``#6b7280`` | Disabled text |
+| **--color-selected-bg** | ``rgba(96,165,250,0.12)`` | Selected category background |
+| **--color-selected-border** | ``#60a5fa`` | Selected category border |
+| **--color-selected-text** | ``#93c5fd`` | Selected category text |
+| **--color-correct** | ``#86efac`` | Correct answer text |
+| **--color-correct-bg** | ``rgba(134,239,172,0.1)`` | Correct answer background |
+| **--color-correct-border** | ``rgba(134,239,172,0.35)`` | Correct answer border |
+| **--color-wrong** | ``#fca5a5`` | Wrong answer text |
+| **--color-wrong-bg** | ``rgba(252,165,165,0.1)`` | Wrong answer background |
+| **--color-wrong-border** | ``rgba(252,165,165,0.35)`` | Wrong answer border |
+
+---
+
 ## HTML5 Usage
 - HTML validated using W3C Validator
 - Semantic elements used appropriately (header, main, section, footer)

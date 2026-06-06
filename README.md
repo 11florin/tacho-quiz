@@ -328,10 +328,18 @@ All handled correctly.
 ### 5. Validation
 **HTML Validation**  
 - All HTML files were tested using the W3C Markup   Validation Service.  
+[index.html](docs/assets/images/img-validator/html-validator/index.html.png)  
+[quiz.html](docs/assets/images/img-validator/html-validator/quiz.html.png)  
+[score.html](docs/assets/images/img-validator/html-validator/score.html.png)  
+[about.html](docs/assets/images/img-validator/html-validator/about.html.png)  
+[login.html](docs/assets/images/img-validator/html-validator/login.html.png)  
+[confirm.html](docs/assets/images/img-validator/html-validator/confirm.html.png)  
 - No errors were found.
 
 **CSS Validation**
-- The stylesheet passed the W3C CSS Validator with no errors.
+- The stylesheet passed the W3C CSS Validator with no errors.  
+[CSS-validator](docs/assets/images/img-validator/CSS-validator/css-validator.png)  
+
 
 **JavaScript (JSHint)**
 - All JavaScript files were tested using JSHint.

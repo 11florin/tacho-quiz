@@ -371,24 +371,13 @@ The project is deployed using GitHub Pages.
 | Navigation menu | Open/close on all pages | Menu toggles correctly | Passed |
 | Login form | Submit empty fields | Error message shown | Passed |
 
-### 2. Responsive Testing
-
-Tested on:
-
-- Android (Chrome, Firefox)
-- iPhone (Safari)
-- iPad
-- Windows desktop (Chrome, Edge, Firefox)
-- macOS (Safari, Chrome)
-
-All layouts behaved correctly from 360px to 4K.
 
 ### 3. Browser Compatibility
 
-- Chrome 
-- Firefox 
-- Edge 
-- Safari 
+* [Chrome](docs/assets/images/img-validator/browser-compatibility/chrome-desktop.png) 
+* [Firefox](docs/assets/images/img-validator/browser-compatibility/firefox-desktop.png) 
+* [Edge](docs/assets/images/img-validator/browser-compatibility/edge-desktop.png) 
+* [Opera](docs/assets/images/img-validator/browser-compatibility/opera-desktop.png)
 
 ### 4. Input Validation Testing
 

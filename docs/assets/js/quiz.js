@@ -10,14 +10,18 @@ if (!category) {
 }
 
 // Check if QUESTIONS is loaded correctly
-if (typeof QUESTIONS === "undefined" || !Array.isArray(QUESTIONS) || QUESTIONS.length === 0) {
+if (
+  typeof QUESTIONS === "undefined" ||
+  !Array.isArray(QUESTIONS) ||
+  QUESTIONS.length === 0
+) {
   alert("Quiz data could not be loaded.");
   window.location.href = "index.html";
   throw new Error("Quiz data could not be loaded");
 }
 
 // Filter questions by category
-let questions = QUESTIONS.filter(q => q.category === category);
+let questions = QUESTIONS.filter((q) => q.category === category);
 
 // Check if category has questions
 if (questions.length === 0) {
@@ -28,7 +32,6 @@ if (questions.length === 0) {
 
 // Save selected category for score page
 localStorage.setItem("tq_quiz_category", category);
-
 
 // **** Quiz Logic ****
 const LABELS = ["A", "B", "C", "D"];
@@ -58,6 +61,7 @@ function loadQuestion() {
     localStorage.setItem("tq_score", score);
     localStorage.setItem("tq_total", total);
     localStorage.setItem("tq_answers", JSON.stringify(answeredQuestions));
+    localStorage.setItem("tq_session_done", "1");
     window.location.href = "score.html";
     return;
   }

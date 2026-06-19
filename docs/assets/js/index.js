@@ -97,6 +97,7 @@ startBtn.addEventListener("click", function () {
   localStorage.removeItem("tq_questionIndex");
   localStorage.removeItem("tq_quiz_category");
   localStorage.removeItem("tq_saved");
+  localStorage.removeItem("tq_session_done");
 
   localStorage.setItem("tq_category", category);
   // Navigate to quiz page

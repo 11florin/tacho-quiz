@@ -1,21 +1,36 @@
 "use strict";
 
-// Quiz Logic
-const LABELS = ["A", "B", "C", "D"];
-
+// Check if a category was selected
 const category = localStorage.getItem("tq_category");
 
-if (category) {
-  localStorage.setItem("tq_quiz_category", category);
+if (!category) {
+  alert("Please select a category before starting the quiz.");
+  window.location.href = "index.html";
+  throw new Error("No category selected");
 }
 
-// If no category chosen, redirect home
-if (!category) {
+// Check if QUESTIONS is loaded correctly
+if (typeof QUESTIONS === "undefined" || !Array.isArray(QUESTIONS) || QUESTIONS.length === 0) {
+  alert("Quiz data could not be loaded.");
   window.location.href = "index.html";
 }
 
-// Filter question by category
-let questions = QUESTIONS.filter((q) => q.category === category);
+// Filter questions by category
+let questions = QUESTIONS.filter(q => q.category === category);
+
+// Check if category has questions
+if (questions.length === 0) {
+  alert("No questions found for this category.");
+  window.location.href = "index.html";
+  throw new Error("No questions for selected category");
+}
+
+// Save selected category for score page
+localStorage.setItem("tq_quiz_category", category);
+
+
+// **** Quiz Logic ****
+const LABELS = ["A", "B", "C", "D"];
 
 // Shuffle questions (random order)
 questions = questions.sort(() => Math.random() - 0.5);

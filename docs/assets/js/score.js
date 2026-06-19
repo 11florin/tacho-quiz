@@ -1,9 +1,21 @@
 "use strict";
 
-// Retrieve stored quiz data from localStorage
-const score = parseInt(localStorage.getItem("tq_score") || "0", 10);
-const total = parseInt(localStorage.getItem("tq_total") || "10", 10);
-const answers = JSON.parse(localStorage.getItem("tq_answers") || "[]");
+const rawScore = localStorage.getItem("tq_score");
+const rawTotal = localStorage.getItem("tq_total");
+const rawAnswers = localStorage.getItem("tq_answers");
+const sessionAlreadyShown = localStorage.getItem("tq_saved") === "1";
+
+const hasQuizSession =
+  rawScore !== null &&
+  rawTotal !== null &&
+  rawAnswers !== null &&
+  rawAnswers !== "[]" &&
+  parseInt(rawTotal, 10) > 0 &&
+  !sessionAlreadyShown;
+
+const score = hasQuizSession ? parseInt(rawScore, 10) : 0;
+const total = hasQuizSession ? parseInt(rawTotal, 10) : 0;
+const answers = hasQuizSession ? JSON.parse(rawAnswers) : [];
 
 // DOM elements for score display
 const scoreValue = document.getElementById("score-value");
@@ -15,15 +27,11 @@ const scoreBreakdown = document.getElementById("score-breakdown");
 //  Calculate score percentage and update UI
 const LABELS = ["A", "B", "C", "D"];
 
-// Applied the fix suggested by GitHub Copilot review.
-// Resolution implemented with assistance from Copilot AI.
-
-// Validate score and toatal to avoid NaN/Infinity
 const safeScore = Number.isFinite(score) ? score : 0;
-const safeTotal = Number.isFinite(total) && total > 0 ? total : 1;
+const safeTotal = Number.isFinite(total) && total > 0 ? total : 0;
 
 // Comute percentage
-let pct = Math.round((safeScore / safeTotal) * 100);
+let pct = safeTotal > 0 ? Math.round((safeScore / safeTotal) * 100) : 0;
 
 // Clamp to [0, 100]
 pct = Math.min(Math.max(pct, 0), 100);
@@ -43,7 +51,9 @@ requestAnimationFrame(() => {
 
 //  Display a message based on the user's score
 let message = "";
-if (pct === 100) {
+if (!hasQuizSession) {
+  message = "No quiz session found yet. Start a quiz to see your score.";
+} else if (pct === 100) {
   message = "💯 Perfect score! Outstanding!";
 } else if (pct >= 80) {
   message = "👏 Great Job!";
@@ -58,7 +68,7 @@ scoreMessage.textContent = message;
 
 // Build a breakdown of the last answered question
 // Shows correct answer, chosen answer and explanation
-if (answers.length > 0) {
+if (hasQuizSession && answers.length > 0) {
   const last = answers[answers.length - 1];
   const title = document.createElement("p");
   title.className = "breakdown-title";
@@ -76,7 +86,6 @@ if (answers.length > 0) {
     item.className =
       "breakdown-item" + (isCorrect ? " correct" : wasChosen ? " wrong" : "");
 
-    // item.innerHTML = `<span class="answer-label">${LABELS[i]}.</span>${last.answers[i]}`;
     // Applied GitHub Copilot's security recommendation by replacing innerHTML with safe DOM node creation (textContent + createTextNode) to prevent HTML injection. Fix implemented with assistance from Copilot AI.
     const label = document.createElement("span");
     label.className = "answer-label";
@@ -97,7 +106,7 @@ if (answers.length > 0) {
 
 // Save the completed quiz attempt to history
 //  Used for future statistics or review pages
-if (!localStorage.getItem("tq_saved")) {
+if (hasQuizSession) {
   const history = JSON.parse(localStorage.getItem("tq_history") || "[]");
   history.push({
     category: localStorage.getItem("tq_category") || "unknown",
@@ -120,7 +129,7 @@ const prevBest = bestScores[playedCategory]
   : 0;
 
 // It only updates if the current score is higher
-if (pct > prevBest) {
+if (hasQuizSession && pct > prevBest) {
   bestScores[playedCategory] = {
     pct: pct,
     score: safeScore,

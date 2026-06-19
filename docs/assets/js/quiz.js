@@ -13,6 +13,7 @@ if (!category) {
 if (typeof QUESTIONS === "undefined" || !Array.isArray(QUESTIONS) || QUESTIONS.length === 0) {
   alert("Quiz data could not be loaded.");
   window.location.href = "index.html";
+  throw new Error("Quiz data could not be loaded");
 }
 
 // Filter questions by category

@@ -91,10 +91,15 @@ startBtn.addEventListener("click", function () {
   if (!category) return;
 
   // Reset quiz progress
-  localStorage.setItem("tq_questionIndex", "0");
-  localStorage.setItem("tq_score", "0");
+  localStorage.removeItem("tq_score");
+  localStorage.removeItem("tq_total");
   localStorage.removeItem("tq_answers");
+  localStorage.removeItem("tq_questionIndex");
+  localStorage.removeItem("tq_quiz_category");
+  localStorage.removeItem("tq_saved");
+  localStorage.removeItem("tq_session_done");
 
+  localStorage.setItem("tq_category", category);
   // Navigate to quiz page
   window.location.href = "quiz.html";
 });

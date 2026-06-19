@@ -129,10 +129,6 @@ answersList.addEventListener("click", function (e) {
 //   Update progress and load next question
 nextBtn.addEventListener("click", function () {
   questionIndex++;
-  // localStorage.setItem("tq_questionIndex", questionIndex);
-  // localStorage.setItem("tq_score", score);
-  // localStorage.setItem("tq_answers", JSON.stringify(answeredQuestions));
-  // localStorage.removeItem("tq_saved");
   loadQuestion();
 });
 

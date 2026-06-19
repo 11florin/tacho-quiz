@@ -41,7 +41,6 @@ if (
 }
 
 localStorage.removeItem("tq_session_done");
-document.body.style.visibility = "visible";
 
 // DOM elements for score display
 const scoreValue = document.getElementById("score-value");
@@ -126,7 +125,12 @@ scoreBreakdown.appendChild(exp);
 // Save the completed quiz attempt to history
 // Used for future statistics or review pages
 const historyRaw = localStorage.getItem("tq_history");
-const history = historyRaw === null ? [] : JSON.parse(historyRaw);
+let history = [];
+try {
+  history = historyRaw === null ? [] : JSON.parse(historyRaw);
+} catch {
+  history = [];
+}
 const currentCategory = localStorage.getItem("tq_category");
 
 if (currentCategory !== null) {
@@ -145,7 +149,12 @@ const playedCategory = localStorage.getItem("tq_quiz_category");
 
 if (playedCategory !== null) {
   const bestScoresRaw = localStorage.getItem("tq_best_scores");
-  const bestScores = bestScoresRaw === null ? {} : JSON.parse(bestScoresRaw);
+  let bestScores = {};
+  try {
+    bestScores = bestScoresRaw === null ? {} : JSON.parse(bestScoresRaw);
+  } catch {
+    bestScores = {};
+  }
   const prevBest = bestScores[playedCategory]
     ? bestScores[playedCategory].pct
     : 0;

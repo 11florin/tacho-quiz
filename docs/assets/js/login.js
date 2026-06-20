@@ -9,6 +9,8 @@ const errorMsg = document.getElementById("error-msg");
 errorMsg.style.display = "none";
 
 form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
     const user = username.value.trim();
     const pass = password.value.trim();
 
@@ -21,4 +23,6 @@ form.addEventListener("submit", function(e) {
     }
     // Login fake
     localStorage.setItem("tq_user", user);
-})
+
+    window.location.href = "confirm.html";
+});

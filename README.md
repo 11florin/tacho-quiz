@@ -584,7 +584,7 @@ validated and clamped score calculations
 
 ### 9. Bug Fixes
 
-**Issue** After receiving feedback from my professor, I improved the score page to follow a stricter defensive approach. I found that `score.html` could show stale results or fail when it was opened without a valid quiz session.
+**Issue:** I improved the score page to follow a stricter defensive approach. I found that `score.html` could show stale results or fail when it was opened without a valid quiz session.
 
 **Fix:** To fix this, I added session validation so the score page only loads when a quiz has been fully completed. I also made sure that:
 - `tq_session_done` is set only at the end of a completed quiz,

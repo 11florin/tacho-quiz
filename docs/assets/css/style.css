@@ -1069,12 +1069,13 @@ a.action-btn {
 .social-networks ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   list-style-type: none;
 }
 .social-networks ul li a {
   color: var(--color-text);
   margin-left: 20px;
+  font-size: 20px;
 }
 /* media for footer tablet and > */
 @media (min-width: 768px) {
